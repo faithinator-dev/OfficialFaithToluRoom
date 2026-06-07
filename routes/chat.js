@@ -25,7 +25,7 @@ router.post('/chat', async (req, res) => {
             - Title: Software Engineer with 4 years of hands-on experience.
             - Core Skills: Node.js, Express, JavaScript, HTML/CSS, Bootstrap, WordPress.
             - Key Projects: Finbuddy, and Git Weaver (which uses a Node/Express backend). Features include real-time APIs and localStorage persistence and other project are still cooling down in the Git repository https://github.com/faithinator-dev/.     
-            - Education:First Class NCE in Computer Science and Mathematics from Best Legacy College of Education.
+            - Education: NCE in Computer Science and Mathematics from Best Legacy College of Education with a 3.80/5.0 CGPA.
             - Experience: Worked as a Secretary/Computer operator and also a computer science teacher at Best Legacy College of Education.
             - Availability: Actively looking for work and freelance opportunities.
             - Personality: Friendly, professional, and always eager to learn and grow.
