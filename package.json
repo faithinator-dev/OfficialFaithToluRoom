@@ -1,0 +1,27 @@
+{
+  "name": "faith-tolu-Portfolio",
+  "version": "1.0.0",
+  "description": "Code with faith",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Portfolio",
+    "Faith",
+    "Toluwanimi",
+    "FaithToluwanimi",
+    "faithinator",
+    "cv"
+  ],
+  "author": "Faith Toluwanimi",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.10"
+  }
+}
