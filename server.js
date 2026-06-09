@@ -15,11 +15,13 @@ app.use(express.static('public'));
 
 // Import your route files
 const contactRoute = require('./routes/contact');
+const projectsRoute = require('./routes/projects');
 const chatRoute = require('./routes/chat');
 
 // Mount the routes to the /api path
 app.use('/api', contactRoute);
 app.use('/api', chatRoute);
+app.use('/api', projectsRoute);
 
 // Catch-all route to serve your index.html for any unknown requests
 app.use((req, res) => {

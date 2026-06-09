@@ -1,0 +1,83 @@
+[
+    {
+        "id": "insight-ink",
+        "title": "Insight-Ink",
+        "badge": "NODE / MONGODB",
+        "badgeColor": "var(--accent-primary)",
+        "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
+        "liveLink": "#",
+        "githubLink": "https://github.com/faithinator-dev/insight-ink"
+    },
+    {
+        "id": "gitweaver",
+        "title": "Gitweaver",
+        "badge": "NODE.JS / EXPRESS / GITHUB OAUTH",
+        "badgeColor": "var(--accent-secondary)",
+        "description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow.",
+        "liveLink": "https://gitweaver.onrender.com/",
+        "githubLink": "https://github.com/faithinator-dev/Gitweaver"
+    },
+    {
+        "id": "t-konekt",
+        "title": "T-Konekt",
+        "badge": "FIREBASE",
+        "badgeColor": "var(--accent-primary)",
+        "description": "A social media application platform featuring real-time data synchronization and instant messaging capabilities.",
+        "liveLink": "#",
+        "githubLink": "https://github.com/faithinator-dev/t-konekt"
+    },
+    {
+        "id": "finbuddy",
+        "title": "Finbuddy",
+        "badge": "HTML / CSS / JAVASCRIPT",
+        "badgeColor": "var(--accent-secondary)",
+        "description": "A financial management application helping users track expenses and income with budgeting and categorization features.",
+        "liveLink": "#",
+        "githubLink": "https://github.com/faithinator-dev/finbuddy"
+    },
+    {
+        "id": "code-guardian",
+        "title": "CodeGuardian",
+        "badge": "NODE.JS / EXPRESS / MONGODB",
+        "badgeColor": "var(--accent-primary)",
+        "description": "A code review tool featuring automated analysis and style enforcement to help developers write maintainable code.",
+        "liveLink": "#",
+        "githubLink": "#"
+    },
+    {
+        "id": "task-master",
+        "title": "TaskMaster",
+        "badge": "NODE.JS / EXPRESS / MONGODB",
+        "badgeColor": "var(--accent-secondary)",
+        "description": "Organize tasks and improve productivity with assignment tracking and detailed reporting features.",
+        "liveLink": "#",
+        "githubLink": "#"
+    },
+    {
+        "id": "wa-store",
+        "title": "WA-Store",
+        "badge": "NODE.JS / EXPRESS / MONGODB",
+        "badgeColor": "var(--accent-primary)",
+        "description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp.",
+        "liveLink": "https://wastore-ng.render.com",
+        "githubLink": "https://github.com/faithinator-dev/WAStore.NG/"
+    },
+    {
+        "id": "chatgpt-clone",
+        "title": "ChatGPT-Clone",
+        "badge": "NODE.JS / EXPRESS / OPENAI API",
+        "badgeColor": "var(--accent-secondary)",
+        "description": "A natural language processing chatbot mimicking AI conversational functionality with platform integration.",
+        "liveLink": "#",
+        "githubLink": "#"
+    },
+    {
+        "id": "weather-wise",
+        "title": "WeatherWise",
+        "badge": "NODE.JS / EXPRESS / OPENWEATHERMAP API",
+        "badgeColor": "var(--accent-primary)",
+        "description": "Accurate weather forecasting providing current conditions, hourly forecasts, and severe weather alerts.",
+        "liveLink": "#",
+        "githubLink": "#"
+    }
+]

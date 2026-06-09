@@ -1,5 +1,7 @@
 // Antigravity Portfolio Logic
 
+let projectData = []; // Global store for projects
+
 // Tab navigation logic with improved transitions
 function switchTab(tabId, element) {
     const screens = document.querySelectorAll('.screen');
@@ -33,11 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navigation setup
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', (e) => {
-            // Support both inline onclick and data-tab attributes
             const target = item.getAttribute('data-tab') || item.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
             if (target) switchTab(target, item);
         });
     });
+
+    // Load projects from API
+    loadProjects();
 
     // Contact form handler
     const contactForm = document.getElementById('contactForm');
@@ -95,6 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') handleAiChat();
         });
     }
+
+    // Modal Close on backdrop click
+    const modalOverlay = document.getElementById('projectModal');
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
 });
 
 // AI Chat logic
@@ -141,4 +153,70 @@ function escapeHtml(text) {
     return text.replace(/[&<>"']/g, (c) => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[c]));
+}
+
+// Function to load and render projects from your Node API
+async function loadProjects() {
+    const projectGrid = document.getElementById('project-grid');
+    if (!projectGrid) return;
+
+    try {
+        const response = await fetch('/api/projects'); 
+        projectData = await response.json();
+
+        projectGrid.innerHTML = '';
+
+        projectData.forEach((project, index) => {
+            const floatClass = `float-${(index % 3) + 1}`;
+
+            const cardHTML = `
+                <div class="glass-card glass ${floatClass}" style="cursor: pointer;" onclick="showProjectDetails('${project.id}')">
+                    <h3>${project.title}</h3>
+                    <p style="color: ${project.badgeColor || 'var(--accent-primary)'}; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
+                        ${project.badge || 'PROJECT'}
+                    </p>
+                    <p>${project.description.substring(0, 100)}...</p>
+                </div>
+            `;
+            projectGrid.innerHTML += cardHTML;
+        });
+
+    } catch (error) {
+        console.error("Error loading projects:", error);
+        projectGrid.innerHTML = `<p style="text-align: center; color: var(--text-muted);">Projects currently unavailable.</p>`;
+    }
+}
+
+// Modal Logic
+function showProjectDetails(id) {
+    const project = projectData.find(p => p.id === id);
+    if (!project) return;
+
+    document.getElementById('modalTitle').textContent = project.title;
+    document.getElementById('modalBadge').textContent = project.badge;
+    document.getElementById('modalBadge').style.color = project.badgeColor;
+    document.getElementById('modalDescription').textContent = project.description;
+
+    const liveBtn = document.getElementById('modalLive');
+    const githubBtn = document.getElementById('modalGithub');
+
+    if (project.liveLink && project.liveLink !== '#') {
+        liveBtn.style.display = 'flex';
+        liveBtn.href = project.liveLink;
+    } else {
+        liveBtn.style.display = 'none';
+    }
+
+    if (project.githubLink && project.githubLink !== '#') {
+        githubBtn.style.display = 'flex';
+        githubBtn.href = project.githubLink;
+    } else {
+        githubBtn.style.display = 'none';
+    }
+
+    document.getElementById('projectModal').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('projectModal').classList.remove('active');
 }
