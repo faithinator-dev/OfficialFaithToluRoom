@@ -1,83 +1,387 @@
 [
-    {
-        "id": "insight-ink",
-        "title": "Insight-Ink",
-        "badge": "NODE / MONGODB",
-        "badgeColor": "var(--accent-primary)",
-        "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
-        "liveLink": "#",
-        "githubLink": "https://github.com/faithinator-dev/insight-ink"
-    },
-    {
-        "id": "gitweaver",
-        "title": "Gitweaver",
-        "badge": "NODE.JS / EXPRESS / GITHUB OAUTH",
-        "badgeColor": "var(--accent-secondary)",
-        "description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow.",
-        "liveLink": "https://gitweaver.onrender.com/",
-        "githubLink": "https://github.com/faithinator-dev/Gitweaver"
-    },
-    {
-        "id": "t-konekt",
-        "title": "T-Konekt",
-        "badge": "FIREBASE",
-        "badgeColor": "var(--accent-primary)",
-        "description": "A social media application platform featuring real-time data synchronization and instant messaging capabilities.",
-        "liveLink": "#",
-        "githubLink": "https://github.com/faithinator-dev/t-konekt"
-    },
-    {
-        "id": "finbuddy",
-        "title": "Finbuddy",
-        "badge": "HTML / CSS / JAVASCRIPT",
-        "badgeColor": "var(--accent-secondary)",
-        "description": "A financial management application helping users track expenses and income with budgeting and categorization features.",
-        "liveLink": "#",
-        "githubLink": "https://github.com/faithinator-dev/finbuddy"
-    },
-    {
-        "id": "code-guardian",
-        "title": "CodeGuardian",
-        "badge": "NODE.JS / EXPRESS / MONGODB",
-        "badgeColor": "var(--accent-primary)",
-        "description": "A code review tool featuring automated analysis and style enforcement to help developers write maintainable code.",
-        "liveLink": "#",
-        "githubLink": "#"
-    },
-    {
-        "id": "task-master",
-        "title": "TaskMaster",
-        "badge": "NODE.JS / EXPRESS / MONGODB",
-        "badgeColor": "var(--accent-secondary)",
-        "description": "Organize tasks and improve productivity with assignment tracking and detailed reporting features.",
-        "liveLink": "#",
-        "githubLink": "#"
-    },
-    {
-        "id": "wa-store",
-        "title": "WA-Store",
-        "badge": "NODE.JS / EXPRESS / MONGODB",
-        "badgeColor": "var(--accent-primary)",
-        "description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp.",
-        "liveLink": "https://wastore-ng.render.com",
-        "githubLink": "https://github.com/faithinator-dev/WAStore.NG/"
-    },
-    {
-        "id": "chatgpt-clone",
-        "title": "ChatGPT-Clone",
-        "badge": "NODE.JS / EXPRESS / OPENAI API",
-        "badgeColor": "var(--accent-secondary)",
-        "description": "A natural language processing chatbot mimicking AI conversational functionality with platform integration.",
-        "liveLink": "#",
-        "githubLink": "#"
-    },
-    {
-        "id": "weather-wise",
-        "title": "WeatherWise",
-        "badge": "NODE.JS / EXPRESS / OPENWEATHERMAP API",
-        "badgeColor": "var(--accent-primary)",
-        "description": "Accurate weather forecasting providing current conditions, hourly forecasts, and severe weather alerts.",
-        "liveLink": "#",
-        "githubLink": "#"
-    }
+  {
+    "id": "insight-ink",
+    "title": "Insight-Ink",
+    "badge": "NODE / MONGODB",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
+    "full_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/insight-ink"
+  },
+  {
+    "id": "gitweaver",
+    "title": "Gitweaver",
+    "badge": "NODE.JS / EXPRESS / GITHUB OAUTH",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow.",
+    "full_description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow.",
+    "liveLink": "https://gitweaver.onrender.com/",
+    "githubLink": "https://github.com/faithinator-dev/Gitweaver"
+  },
+  {
+    "id": "t-konekt",
+    "title": "T-Konekt",
+    "badge": "FIREBASE",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A social media application platform featuring real-time data synchronization and instant messaging capabilities.",
+    "full_description": "A social media application platform featuring real-time data synchronization and messaging capabilities. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A social media application platform featuring real-time data synchronization and messaging capabilities.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/t-konekt"
+  },
+  {
+    "id": "finbuddy",
+    "title": "Finbuddy",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A financial management application helping users track expenses and income with budgeting and categorization features.",
+    "full_description": "A financial management application helping users track expenses and income with budgeting features. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A financial management application helping users track expenses and income with budgeting features.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/finbuddy"
+  },
+  {
+    "id": "code-guardian",
+    "title": "CodeGuardian",
+    "badge": "NODE.JS / EXPRESS / MONGODB",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A code review tool featuring automated analysis and style enforcement to help developers write maintainable code.",
+    "full_description": "A code review tool featuring automated analysis and style enforcement. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A code review tool featuring automated analysis and style enforcement.",
+    "liveLink": "#",
+    "githubLink": "#"
+  },
+  {
+    "id": "task-master",
+    "title": "TaskMaster",
+    "badge": "NODE.JS / EXPRESS / MONGODB",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "Organize tasks and improve productivity with assignment tracking and detailed reporting features.",
+    "full_description": "Organize tasks and improve productivity with assignment tracking. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "Organize tasks and improve productivity with assignment tracking.",
+    "liveLink": "#",
+    "githubLink": "#"
+  },
+  {
+    "id": "wa-store",
+    "title": "WA-Store",
+    "badge": "NODE.JS / EXPRESS / MONGODB",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp.",
+    "full_description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp.",
+    "liveLink": "https://wastore-ng.render.com",
+    "githubLink": "https://github.com/faithinator-dev/WAStore.NG/"
+  },
+  {
+    "id": "chatgpt-clone",
+    "title": "ChatGPT-Clone",
+    "badge": "NODE.JS / EXPRESS / OPENAI API",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A natural language processing chatbot mimicking AI conversational functionality with platform integration.",
+    "full_description": "A natural language processing chatbot mimicking AI conversational functionality. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A natural language processing chatbot mimicking AI conversational functionality.",
+    "liveLink": "#",
+    "githubLink": "#"
+  },
+  {
+    "id": "weather-wise",
+    "title": "WeatherWise",
+    "badge": "NODE.JS / EXPRESS / OPENWEATHERMAP API",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "Accurate weather forecasting providing current conditions, hourly forecasts, and severe weather alerts.",
+    "full_description": "Accurate weather forecasting providing current conditions and hourly forecasts. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "Accurate weather forecasting providing current conditions and hourly forecasts.",
+    "liveLink": "#",
+    "githubLink": "#"
+  },
+  {
+    "id": "faithinator-eddosier",
+    "title": "Eddosier",
+    "badge": "BOOTSTRAP / HTML / CSS",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A professional portfolio showcasing academic and technical achievements, built with Bootstrap 5 for optimal responsiveness.",
+    "full_description": "A professional portfolio showcasing academic and technical achievements, built with Bootstrap 5. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A professional portfolio showcasing academic and technical achievements, built with Bootstrap 5.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Faithinator-eddosier"
+  },
+  {
+    "id": "faithinator-calculator",
+    "title": "Calculator",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A feature-rich web calculator with a modern UI, demonstrating advanced CSS styling and JavaScript logic handling.",
+    "full_description": "A feature-rich web calculator with a modern UI, demonstrating advanced CSS styling. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A feature-rich web calculator with a modern UI, demonstrating advanced CSS styling.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/faithinator-calculator"
+  },
+  {
+    "id": "spartan-online-simulator-game",
+    "title": "Spartan Game",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "An immersive text-based adventure game that challenges players with complex decision-making and narrative branching.",
+    "full_description": "An immersive text-based adventure game that challenges players with complex decision-making. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "An immersive text-based adventure game that challenges players with complex decision-making.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Spartan-online-simulator-game"
+  },
+  {
+    "id": "faithinator-dribbble-com",
+    "title": "Dribbble",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A pixel-perfect clone of the Dribbble homepage, focusing on high-fidelity design reproduction and responsive layouts.",
+    "full_description": "A pixel-perfect clone of the Dribbble homepage, focusing on high-fidelity design reproduction. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A pixel-perfect clone of the Dribbble homepage, focusing on high-fidelity design reproduction.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Faithinator-dribbble.com"
+  },
+  {
+    "id": "faithinator-credpal-clone-responsiveness-website",
+    "title": "Credpal Clone",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A fully responsive financial service landing page clone, emphasizing clean UI components and cross-device compatibility.",
+    "full_description": "A fully responsive financial service landing page clone, emphasizing clean UI components. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A fully responsive financial service landing page clone, emphasizing clean UI components.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Faithinator-credpal-clone-responsiveness-website"
+  },
+  {
+    "id": "faith-tolu-webroom",
+    "title": "Webroom",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "An experimental cloud-based lab environment for web development testing and collaborative coding projects.",
+    "full_description": "An experimental cloud-based lab environment for web development testing. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "An experimental cloud-based lab environment for web development testing.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Faith-tolu-webroom"
+  },
+  {
+    "id": "whizwizard",
+    "title": "Whizwizard",
+    "badge": "NODE.JS / MONGODB",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A sophisticated multi-user quiz platform featuring real-time synchronization, JWT authentication, and dynamic leaderboards.",
+    "full_description": "A sophisticated multi-user quiz platform featuring real-time synchronization and JWT authentication. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A sophisticated multi-user quiz platform featuring real-time synchronization and JWT authentication.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/whizwizard"
+  },
+  {
+    "id": "glowing-christmas-celebration-card",
+    "title": "Christmas Card",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "An interactive digital greeting experience utilizing CSS animations and JavaScript for a festive visual display.",
+    "full_description": "An interactive digital greeting experience utilizing CSS animations and JavaScript. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "An interactive digital greeting experience utilizing CSS animations and JavaScript.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Glowing-Christmas-celebration-card"
+  },
+  {
+    "id": "faithinator-risevest-clone",
+    "title": "Risevest Clone",
+    "badge": "BOOTSTRAP / HTML / CSS",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A high-performance clone of the Risevest hero section, featuring complex animations and modern design principles.",
+    "full_description": "A high-performance clone of the Risevest hero section, featuring complex animations. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A high-performance clone of the Risevest hero section, featuring complex animations.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Faithinator-risevest-clone"
+  },
+  {
+    "id": "naijagrading-system",
+    "title": "NaijaGrading",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A specialized academic tool designed to streamline grade calculations based on the Nigerian educational system.",
+    "full_description": "A specialized academic tool designed to streamline grade calculations. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A specialized academic tool designed to streamline grade calculations.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/NaijaGrading-System"
+  },
+  {
+    "id": "pinterest",
+    "title": "Pinterest Clone",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A visual discovery engine clone featuring a masonry layout and interactive image pinning capabilities.",
+    "full_description": "A visual discovery engine clone featuring a masonry layout and image pinning. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A visual discovery engine clone featuring a masonry layout and image pinning.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/pinterest"
+  },
+  {
+    "id": "my-30-day-js-challenge",
+    "title": "JS Challenge",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A comprehensive collection of 30 specialized JavaScript projects demonstrating various frontend engineering concepts.",
+    "full_description": "A comprehensive collection of 30 specialized JavaScript projects. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A comprehensive collection of 30 specialized JavaScript projects.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/my-30-day-js-challenge"
+  },
+  {
+    "id": "faithinator-ogbomoso-hub",
+    "title": "Ogbomoso Hub",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A community-focused digital platform providing localized information and resources for the Ogbomoso region.",
+    "full_description": "A community-focused digital platform providing localized information. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A community-focused digital platform providing localized information.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/faithinator-ogbomoso-hub"
+  },
+  {
+    "id": "canva-sign-in",
+    "title": "Canva Clone",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A secure and intuitive authentication portal clone, mimicking the Canva user experience with precision.",
+    "full_description": "A secure and intuitive authentication portal clone, mimicking the Canva experience. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A secure and intuitive authentication portal clone, mimicking the Canva experience.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/canva-sign-in"
+  },
+  {
+    "id": "excellence-secondary-school",
+    "title": "Excellence School",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A robust educational management system with dedicated portals for students, faculty, and administrators.",
+    "full_description": "A robust educational management system with dedicated portals. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A robust educational management system with dedicated portals.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/Excellence-Secondary-School"
+  },
+  {
+    "id": "c-meet-platform",
+    "title": "C-Meet",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A global communication platform facilitating real-time discussions and community building through virtual rooms.",
+    "full_description": "A global communication platform facilitating real-time discussions. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A global communication platform facilitating real-time discussions.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/c-meet-platform"
+  },
+  {
+    "id": "faith-delight-dishes",
+    "title": "Delight Dishes",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A culinary exploration app that helps users discover ingredients and recipes with a clean, appetizing interface.",
+    "full_description": "A culinary exploration app that helps users discover ingredients. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A culinary exploration app that helps users discover ingredients.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/faith-Delight-Dishes"
+  },
+  {
+    "id": "schoolboardgame",
+    "title": "Board Game",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A digital adaptation of a classic board game, featuring complex game logic and interactive player mechanics.",
+    "full_description": "A digital adaptation of a classic board game. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A digital adaptation of a classic board game.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/SchoolBoardGame"
+  },
+  {
+    "id": "zeroporfolioforge",
+    "title": "Zero Portfolio",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A high-performance portfolio builder tool that allows developers to forge professional identities from scratch.",
+    "full_description": "A high-performance portfolio builder tool. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A high-performance portfolio builder tool.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/ZeroPorfolioForge"
+  },
+  {
+    "id": "student-information",
+    "title": "Student Info",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A centralized database system for managing student records with automated matriculation number generation.",
+    "full_description": "A centralized database system for managing student records. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A centralized database system for managing student records.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/student-information"
+  },
+  {
+    "id": "terminal-portfolio",
+    "title": "Terminal Portfolio",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A unique, terminal-themed portfolio interface that appeals to developers with its command-line aesthetic.",
+    "full_description": "A unique, terminal-themed portfolio interface. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A unique, terminal-themed portfolio interface.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/terminal-portfolio"
+  },
+  {
+    "id": "faithanic-co",
+    "title": "Faithanic",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A premium portfolio project developed as a milestone achievement during advanced web development training.",
+    "full_description": "A premium portfolio project developed as a milestone achievement. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A premium portfolio project developed as a milestone achievement.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/faithanic.co"
+  },
+  {
+    "id": "3dfaithportfolio",
+    "title": "3D Portfolio",
+    "badge": "THREE.JS / WEBGL",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A cutting-edge 3D portfolio experience built with Three.js, offering an immersive spatial navigation.",
+    "full_description": "A cutting-edge 3D portfolio experience built with Three.js. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A cutting-edge 3D portfolio experience built with Three.js.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/faiththreeportfolio"
+  },
+  {
+    "id": "ludo",
+    "title": "Ludo Game",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A fully interactive, web-based Ludo game featuring multiplayer logic and responsive board design.",
+    "full_description": "A fully interactive, web-based Ludo game. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A fully interactive, web-based Ludo game.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/day-5---ludo"
+  },
+  {
+    "id": "cowrywise",
+    "title": "Cowrywise Clone",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-secondary)",
+    "short_description": "A meticulous reproduction of the Cowrywise financial platform, focusing on trust-oriented UI/UX.",
+    "full_description": "A meticulous reproduction of the Cowrywise financial platform. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A meticulous reproduction of the Cowrywise financial platform.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/cowrywise"
+  },
+  {
+    "id": "nexusblog",
+    "title": "NexusBlog",
+    "badge": "HTML / CSS / JAVASCRIPT",
+    "badgeColor": "var(--accent-primary)",
+    "short_description": "A collaborative blogging ecosystem designed for seamless content creation and community engagement.",
+    "full_description": "A collaborative blogging ecosystem designed for seamless content creation. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
+    "description": "A collaborative blogging ecosystem designed for seamless content creation.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/faithinator-dev/NexusBlog"
+  }
 ]

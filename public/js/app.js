@@ -168,6 +168,7 @@ async function loadProjects() {
 
         projectData.forEach((project, index) => {
             const floatClass = `float-${(index % 3) + 1}`;
+            const displayDesc = project.short_description || project.description || "";
 
             const cardHTML = `
                 <div class="glass-card glass ${floatClass}" style="cursor: pointer;" onclick="showProjectDetails('${project.id}')">
@@ -175,7 +176,7 @@ async function loadProjects() {
                     <p style="color: ${project.badgeColor || 'var(--accent-primary)'}; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
                         ${project.badge || 'PROJECT'}
                     </p>
-                    <p>${project.description.substring(0, 100)}...</p>
+                    <p>${displayDesc.length > 100 ? displayDesc.substring(0, 100) + '...' : displayDesc}</p>
                 </div>
             `;
             projectGrid.innerHTML += cardHTML;
@@ -195,7 +196,7 @@ function showProjectDetails(id) {
     document.getElementById('modalTitle').textContent = project.title;
     document.getElementById('modalBadge').textContent = project.badge;
     document.getElementById('modalBadge').style.color = project.badgeColor;
-    document.getElementById('modalDescription').textContent = project.description;
+    document.getElementById('modalDescription').textContent = project.full_description || project.description;
 
     const liveBtn = document.getElementById('modalLive');
     const githubBtn = document.getElementById('modalGithub');
