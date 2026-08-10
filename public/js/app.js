@@ -1,6 +1,7 @@
 // Antigravity Portfolio Logic
 
 let projectData = []; // Global store for projects
+let activeCategory = 'All';
 
 // Tab navigation logic with improved transitions
 function switchTab(tabId, element) {
@@ -164,28 +165,79 @@ async function loadProjects() {
         const response = await fetch('/api/projects'); 
         projectData = await response.json();
 
-        projectGrid.innerHTML = '';
-
-        projectData.forEach((project, index) => {
-            const floatClass = `float-${(index % 3) + 1}`;
-            const displayDesc = project.short_description || project.description || "";
-
-            const cardHTML = `
-                <div class="glass-card glass ${floatClass}" style="cursor: pointer;" onclick="showProjectDetails('${project.id}')">
-                    <h3>${project.title}</h3>
-                    <p style="color: ${project.badgeColor || 'var(--accent-primary)'}; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
-                        ${project.badge || 'PROJECT'}
-                    </p>
-                    <p>${displayDesc.length > 100 ? displayDesc.substring(0, 100) + '...' : displayDesc}</p>
-                </div>
-            `;
-            projectGrid.innerHTML += cardHTML;
-        });
+        renderCategoryFilters();
+        renderProjects();
 
     } catch (error) {
         console.error("Error loading projects:", error);
         projectGrid.innerHTML = `<p style="text-align: center; color: var(--text-muted);">Projects currently unavailable.</p>`;
     }
+}
+
+function renderCategoryFilters() {
+    const filterContainer = document.getElementById('project-filters');
+    if (!filterContainer) return;
+
+    const categories = [...new Set(projectData.flatMap(project => Array.isArray(project.categories) ? project.categories : []))]
+        .sort((a, b) => a.localeCompare(b));
+
+    filterContainer.innerHTML = '';
+
+    const allButton = document.createElement('button');
+    allButton.className = `skill-tag glass ${activeCategory === 'All' ? 'active' : ''}`;
+    allButton.textContent = 'All';
+    allButton.onclick = () => setActiveCategory('All');
+    filterContainer.appendChild(allButton);
+
+    categories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = `skill-tag glass ${activeCategory === category ? 'active' : ''}`;
+        button.textContent = category;
+        button.onclick = () => setActiveCategory(category);
+        filterContainer.appendChild(button);
+    });
+}
+
+function setActiveCategory(category) {
+    activeCategory = category;
+    renderCategoryFilters();
+    renderProjects();
+}
+
+function renderProjects() {
+    const projectGrid = document.getElementById('project-grid');
+    if (!projectGrid) return;
+
+    const filteredProjects = activeCategory === 'All'
+        ? projectData
+        : projectData.filter(project => Array.isArray(project.categories) && project.categories.includes(activeCategory));
+
+    projectGrid.innerHTML = '';
+
+    if (!filteredProjects.length) {
+        projectGrid.innerHTML = '<p style="text-align: center; color: var(--text-muted);">No projects found for this category.</p>';
+        return;
+    }
+
+    filteredProjects.forEach((project, index) => {
+        const floatClass = `float-${(index % 3) + 1}`;
+        const displayDesc = project.short_description || project.description || '';
+        const categories = Array.isArray(project.categories) ? project.categories : [];
+
+        const cardHTML = `
+            <div class="glass-card glass ${floatClass}" style="cursor: pointer;" onclick="showProjectDetails('${project.id}')">
+                <h3>${project.title}</h3>
+                <p style="color: ${project.badgeColor || 'var(--accent-primary)'}; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
+                    ${project.badge || 'PROJECT'}
+                </p>
+                <p>${displayDesc.length > 100 ? displayDesc.substring(0, 100) + '...' : displayDesc}</p>
+                <div class="project-card-meta">
+                    ${categories.map(category => `<span class="project-category-pill">${category}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        projectGrid.innerHTML += cardHTML;
+    });
 }
 
 // Modal Logic
