@@ -122,6 +122,12 @@ body {
 }
 
 /* Hero Section */
+
+.hero-pic{
+    width: 150px;
+    /* height: ; */
+    border-radius: 30px;
+}
 .hero-content {
     text-align: center;
     margin-bottom: 80px;

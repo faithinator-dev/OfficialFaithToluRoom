@@ -1,126 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Faith Toluwanimi - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Atmospheric Background -->
     <div class="orb orb-1 drift"></div>
     <div class="orb orb-2 drift"></div>
 
     <nav class="nav-dock glass">
-        <div class="nav-item active" onclick="switchTab('home', this)">
-            <i class="fas fa-home"></i><span>Home</span>
-        </div>
-        <div class="nav-item" onclick="switchTab('projects', this)">
-            <i class="fas fa-layer-group"></i><span>Projects</span>
-        </div>
-        <div class="nav-item" onclick="switchTab('ai', this)">
-            <i class="fas fa-robot"></i><span>AI Chat</span>
-        </div>
-        <div class="nav-item" onclick="switchTab('contact', this)">
-            <i class="fas fa-envelope"></i><span>Contact</span>
-        </div>
+      <div class="nav-item active" onclick="switchTab('home', this)">
+        <i class="fas fa-home"></i><span>Home</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('projects', this)">
+        <i class="fas fa-layer-group"></i><span>Projects</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('ai', this)">
+        <i class="fas fa-robot"></i><span>AI Chat</span>
+      </div>
+      <div class="nav-item" onclick="switchTab('contact', this)">
+        <i class="fas fa-envelope"></i><span>Contact</span>
+      </div>
     </nav>
 
     <main class="main-wrapper">
-        
-        <!-- Home Screen -->
-        <section id="home" class="screen active">
-            <div class="hero-content float-1">
-                <h1 class="hero-title">Faith Toluwanimi</h1>
-                <p class="hero-copy">Software Engineer crafting high-performance systems and polished interfaces in a zero-gravity digital space.</p>
-            </div>
+      <!-- Home Screen -->
+      <section id="home" class="screen active">
+        <div class="hero-content float-1">
+          <img
+            class="hero-pic"
+            src="assets/images/IMG_20251008_215743_747.webp"
+          />
+          <h1 class="hero-title">Faith Toluwanimi</h1>
+          <p class="hero-copy">
+            My goal is Creating exceptional digital experiences that drive real
+            business results. Let's build something amazing together.
+          </p>
+        </div>
 
-            <div class="section-title">Core Expertise</div>
-            <div class="skills-container float-2">
-                <div class="skill-tag glass">Node.js</div>
-                <div class="skill-tag glass">Express</div>
-                <div class="skill-tag glass">JavaScript</div>
-                <div class="skill-tag glass">Flutter</div>
-                <div class="skill-tag glass">Dart</div>
-                <div class="skill-tag glass">MongoDB</div>
-                <div class="skill-tag glass">React</div>
-                <div class="skill-tag glass">CSS/SCSS</div>
-            </div>
+        <div class="section-title">Core Expertise</div>
+        <div class="skills-container float-2">
+          <div class="skill-tag glass">Node.js</div>
+          <div class="skill-tag glass">Express</div>
+          <div class="skill-tag glass">EJS</div>
+          <div class="skill-tag glass">JavaScript</div>
+          <div class="skill-tag glass">Flutter</div>
+          <div class="skill-tag glass">Dart</div>
+          <div class="skill-tag glass">MongoDB</div>
+          <div class="skill-tag glass">HTML</div>
+          <div class="skill-tag glass">CSS/SCSS</div>
+        </div>
 
-            <div style="margin-top: 80px;" class="card-grid float-3">
-                <div class="glass-card glass">
-                    <h2 style="font-size: 3rem; color: var(--accent-primary);">4+</h2>
-                    <p>Years Experience</p>
-                </div>
-                <div class="glass-card glass">
-                    <h2 style="font-size: 3rem; color: var(--accent-secondary);">100%</h2>
-                    <p>Reliable</p>
-                </div>
-            </div>
-        </section>
+        <div style="margin-top: 80px" class="card-grid float-3">
+          <div class="glass-card glass">
+            <h2 style="font-size: 3rem; color: var(--accent-primary)">4+</h2>
+            <p>Years Experience</p>
+          </div>
+          <div class="glass-card glass">
+            <h2 style="font-size: 3rem; color: var(--accent-secondary)">
+              100%
+            </h2>
+            <p>Reliable</p>
+          </div>
+        </div>
+        <div style="margin-top: 80px" class="card-grid float-3">
+          <div class="glass-card glass">
+            <h2 style="font-size: 3rem; color: var(--accent-primary)">50+</h2>
+            <p>Projects Completed</p>
+          </div>
+          <div class="glass-card glass">
+            <h2 style="font-size: 3rem; color: var(--accent-secondary)">24H</h2>
+            <p>Response Time</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Projects Screen -->
-        <section id="projects" class="screen">
-            <h2 class="section-title">Featured Builds</h2>
-            <div id="project-grid" class="card-grid">
-                <!-- Projects will be fetched and injected here by loadProjects() -->
-            </div>
-        </section>
+      <!-- Projects Screen -->
+      <section id="projects" class="screen">
+        <h2 class="section-title">Featured Builds</h2>
+        <button onclick="" class="skill-tag glass" > ALL</button>        
+        <button onclick="" class="skill-tag glass">SQI Project</button>        
+        <button onclick="" class="skill-tag glass">Portfolio</button>        
+        <button onclick="" class="skill-tag glass">Saas</button>        
+        <div id="project-grid" class="card-grid">
+          <!-- Projects will be fetched and injected here by loadProjects() -->
+        </div>
+        <div id="My_SQI_Projects" class="card-grid">
+            <!-- Projects build in SQI- injected here by LoadProject()-->
+        </div>
 
-        <!-- AI Chat Screen -->
-        <section id="ai" class="screen">
-            <h2 class="section-title">Ask My AI</h2>
-            <div class="chat-container glass">
-                <div class="chat-messages" id="chatBox">
-                    <div class="msg ai">Hi! I'm Faith's AI assistant. Ask me about his tech stack, experience, or projects!</div>
-                </div>
-                <div class="chat-input-wrapper">
-                    <input type="text" id="aiInput" class="chat-input" placeholder="Type a message...">
-                    <button class="primary-btn" style="padding: 12px 24px;" onclick="handleAiChat()">Send</button>
-                </div>
-            </div>
-        </section>
+      </section>
 
-        <!-- Contact Screen -->
-        <section id="contact" class="screen">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="glass-card glass" style="max-width: 600px; margin: 0 auto;">
-                <form id="contactForm" class="contact-form">
-                    <input type="text" id="name" class="form-field" placeholder="Name" required>
-                    <input type="email" id="email" class="form-field" placeholder="Email" required>
-                    <textarea id="message" class="form-field" rows="5" placeholder="Message" required></textarea>
-                    <button type="submit" class="primary-btn" id="submitBtn">Send Message</button>
-                </form>
-                <p id="formStatus" style="text-align: center; margin-top: 16px;" hidden></p>
+      <!-- AI Chat Screen -->
+      <section id="ai" class="screen">
+        <h2 class="section-title">Ask My AI</h2>
+        <div class="chat-container glass">
+          <div class="chat-messages" id="chatBox">
+            <div class="msg ai">
+              Hi! I'm Faith's AI assistant. Ask me about his tech stack,
+              experience, or projects!
             </div>
-        </section>
+          </div>
+          <div class="chat-input-wrapper">
+            <input
+              type="text"
+              id="aiInput"
+              class="chat-input"
+              placeholder="Type a message..."
+            />
+            <button
+              class="primary-btn"
+              style="padding: 12px 24px"
+              onclick="handleAiChat()"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </section>
 
+      <!-- Contact Screen -->
+      <section id="contact" class="screen">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="glass-card glass" style="max-width: 600px; margin: 0 auto">
+          <form id="contactForm" class="contact-form">
+            <input
+              type="text"
+              id="name"
+              class="form-field"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              class="form-field"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              id="message"
+              class="form-field"
+              rows="5"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit" class="primary-btn" id="submitBtn">
+              Send Message
+            </button>
+          </form>
+          <p
+            id="formStatus"
+            style="text-align: center; margin-top: 16px"
+            hidden
+          ></p>
+        </div>
+      </section>
     </main>
 
     <!-- Project Modal -->
     <div id="projectModal" class="modal-overlay">
-        <div class="modal-content glass">
-            <i class="fas fa-times close-modal" onclick="closeModal()"></i>
-            <h2 id="modalTitle" class="section-title" style="text-align: left; margin-bottom: 8px;"></h2>
-            <p id="modalBadge" style="font-weight: 700; font-size: 0.9rem; margin-bottom: 24px;"></p>
-            <p id="modalDescription" style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;"></p>
-            
-            <div class="modal-links">
-                <a id="modalLive" href="#" target="_blank" class="modal-link link-live">
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a id="modalGithub" href="#" target="_blank" class="modal-link link-github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+      <div class="modal-content glass">
+        <i class="fas fa-times close-modal" onclick="closeModal()"></i>
+        <h2
+          id="modalTitle"
+          class="section-title"
+          style="text-align: left; margin-bottom: 8px"
+        ></h2>
+        <p
+          id="modalBadge"
+          style="font-weight: 700; font-size: 0.9rem; margin-bottom: 24px"
+        ></p>
+        <p
+          id="modalDescription"
+          style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8"
+        ></p>
+
+        <div class="modal-links">
+          <a
+            id="modalLive"
+            href="#"
+            target="_blank"
+            class="modal-link link-live"
+          >
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+          <a
+            id="modalGithub"
+            href="#"
+            target="_blank"
+            class="modal-link link-github"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
+      </div>
     </div>
 
     <script src="/js/app.js" defer></script>
-</body>
+  </body>
 </html>
