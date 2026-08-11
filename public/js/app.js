@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.style.opacity = '0.7';
 
         try {
+            // Send to email
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -67,6 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
 
             if (response.ok) {
+                // Also send to WhatsApp
+                const whatsappMessage = `Hello Faith,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+                const whatsappUrl = `https://wa.me/447046111023?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappUrl, '_blank');
+
                 btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
                 btn.style.background = 'var(--accent-secondary)';
                 contactForm.reset();
