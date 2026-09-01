@@ -29,26 +29,19 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
+    cursor: none;
 }
 
-/* Antigravity Floating Animations */
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-10px) rotate(0.5deg); }
-    66% { transform: translateY(5px) rotate(-0.5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
-@keyframes drift {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(15px, -10px); }
-    100% { transform: translate(0px, 0px); }
-}
 
-.float-1 { animation: float 6s ease-in-out infinite; }
-.float-2 { animation: float 8s ease-in-out infinite 1s; }
-.float-3 { animation: float 7s ease-in-out infinite 0.5s; }
-.drift { animation: drift 12s ease-in-out infinite; }
 
 /* Global Glass Utility */
 .glass {
@@ -439,9 +432,7 @@ body {
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
 }
 
-.social-link:hover i {
-    animation: float 0.6s ease-in-out infinite;
-}
+
 
 @media (max-width: 768px) {
     .main-wrapper { padding-top: 40px; }
@@ -453,4 +444,62 @@ body {
     }
     .nav-item span { display: none; }
     .nav-item { padding: 12px; }
+}
+
+.mouse-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    z-index: 9999;
+    opacity: 0.5;
+}
+
+.text-highlight {
+    color: var(--accent-primary);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-deep);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader {
+    border: 8px solid var(--glass-border);
+    border-top: 8px solid var(--accent-primary);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

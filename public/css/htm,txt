@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Faith Tolu — Creative developer building digital products, AI experiences and modern web applications."
+    >
+
+    <meta name="theme-color" content="#05070b">
+
+    <title>Faith Tolu — Creative Developer</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     CINEMATIC BACKGROUND
+========================================================= -->
+
+<div class="cinematic-background" aria-hidden="true">
+
+    <div class="ambient-orb orb-one"></div>
+
+    <div class="ambient-orb orb-two"></div>
+
+    <div class="ambient-orb orb-three"></div>
+
+    <div class="grid-layer"></div>
+
+    <div class="noise-layer"></div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <a
+        href="#home"
+        class="logo"
+    >
+
+        <span class="logo-mark">
+            FT
+        </span>
+
+        <span>
+            FAITH<span style="color:var(--accent-2)">.</span>
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <ul class="nav-links">
+
+            <li>
+                <a
+                    href="#home"
+                    class="active"
+                >
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#work">
+                    Work
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#stack">
+                    Stack
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <a
+        href="#contact"
+        class="nav-cta"
+    >
+        Let's build
+        <span>↗</span>
+    </a>
+
+
+    <button
+        id="menuToggle"
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+    >
+
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     MOBILE NAV
+========================================================= -->
+
+<div
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#work">
+        Work
+    </a>
+
+    <a href="#about">
+        About
+    </a>
+
+    <a href="#stack">
+        Stack
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</div>
+
+
+
+<!-- =========================================================
+     RIGHT SIDE AI / CONTACT DOCK
+========================================================= -->
+
+<aside
+    class="ai-dock"
+    aria-label="AI assistant and contact"
+>
+
+
+    <!-- AI BUTTON -->
+
+    <button
+        class="ai-dock-button"
+        id="openAiAssistant"
+        type="button"
+        aria-label="Open AI assistant"
+    >
+
+        <span class="ai-pulse"></span>
+
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+    </button>
+
+
+    <!-- CONTACT BUTTON -->
+
+    <a
+        href="#contact"
+        class="ai-dock-button"
+        aria-label="Contact Faith"
+    >
+
+        <i class="fa-regular fa-envelope"></i>
+
+    </a>
+
+
+    <!-- GITHUB -->
+
+    <a
+        href="https://github.com/faithinator-dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ai-dock-button"
+        aria-label="GitHub"
+    >
+
+        <i class="fa-brands fa-github"></i>
+
+    </a>
+
+
+</aside>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="container hero-grid">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+
+                <span class="status-dot"></span>
+
+                AVAILABLE FOR SELECTED PROJECTS
+
+            </div>
+
+
+            <div class="section-label">
+
+                CREATIVE DEVELOPER
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                I BUILD
+                <span class="gradient">
+                    DIGITAL
+                </span>
+                EXPERIENCES.
+
+            </h1>
+
+
+            <p class="hero-subtitle">
+
+                I'm Faith Tolu — a developer focused on
+                building modern digital products, intelligent
+                systems and interfaces that feel alive.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#work"
+                    class="btn btn-primary"
+                >
+
+                    Explore my work
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-ghost"
+                >
+
+                    Start a conversation
+
+                </a>
+
+            </div>
+
+
+            <div class="skills">
+
+                <span class="skill">
+                    HTML
+                </span>
+
+                <span class="skill">
+                    CSS
+                </span>
+
+                <span class="skill">
+                    JavaScript
+                </span>
+
+                <span class="skill">
+                    Node.js
+                </span>
+
+                <span class="skill">
+                    Express
+                </span>
+
+                <span class="skill">
+                    MongoDB
+                </span>
+
+                <span class="skill">
+                    Flutter
+                </span>
+
+                <span class="skill">
+                    AI
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="visual-ring ring-one"></div>
+
+            <div class="visual-ring ring-two"></div>
+
+
+            <div class="visual-core">
+
+                <div class="core-reflection"></div>
+
+                <span>
+                    FT
+                </span>
+
+            </div>
+
+
+            <div class="floating-card card-top">
+
+                <small>
+                    CURRENT MODE
+                </small>
+
+                <strong>
+                    BUILDING
+                </strong>
+
+            </div>
+
+
+            <div class="floating-card card-bottom">
+
+                <small>
+                    STACK
+                </small>
+
+                <strong>
+                    WEB · NODE · FLUTTER
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO MARQUEE -->
+
+    <div class="hero-marquee">
+
+        <div class="marquee-track">
+
+            <span>FULL STACK DEVELOPMENT</span>
+
+            <span>✦</span>
+
+            <span>AI SYSTEMS</span>
+
+            <span>✦</span>
+
+            <span>PRODUCT BUILDING</span>
+
+            <span>✦</span>
+
+            <span>CREATIVE FRONTEND</span>
+
+            <span>✦</span>
+
+            <span>FULL STACK DEVELOPMENT</span>
+
+            <span>✦</span>
+
+            <span>AI SYSTEMS</span>
+
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORK
+========================================================= -->
+
+<section
+    id="work"
+    class="section"
+>
+
+    <div class="container">
+
+
+        <div class="projects-header">
+
+            <div>
+
+                <div class="section-label">
+                    01 / SELECTED WORK
+                </div>
+
+                <h2 class="section-title">
+
+                    THINGS
+                    <span class="gradient">
+                        I'VE BUILT.
+                    </span>
+
+                </h2>
+
+                <p class="section-description">
+
+                    Systems, products, experiments and
+                    interfaces from my development journey.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong
+                    id="projectCount"
+                    style="
+                        font-family:'Space Grotesk';
+                        font-size:3rem;
+                    "
+                >
+                    0
+                </strong>
+
+                <span
+                    style="
+                        display:block;
+                        color:var(--text-muted);
+                        font-size:.7rem;
+                    "
+                >
+                    PROJECTS
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div
+            id="projectFilters"
+            class="project-filters"
+        >
+            <!-- Generated by JS -->
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div
+            class="project-search"
+            style="
+                margin-top:20px;
+                margin-bottom:30px;
+            "
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="projectSearch"
+                type="search"
+                placeholder="Search your projects..."
+                autocomplete="off"
+                aria-label="Search projects"
+            >
+
+        </div>
+
+
+
+        <!-- PROJECT GRID -->
+
+        <div
+            id="projectsGrid"
+            class="projects-grid"
+            aria-live="polite"
+            aria-busy="false"
+        >
+
+            <!-- JavaScript inserts projects -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    id="about"
+    class="section"
+>
+
+    <div class="container">
+
+
+        <div class="projects-header">
+
+            <div>
+
+                <div class="section-label">
+                    02 / ABOUT
+                </div>
+
+                <h2 class="section-title">
+
+                    MORE THAN
+                    <span class="gradient">
+                        CODE.
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <article class="about-card">
+
+                <p>
+
+                    I don't just build websites.
+
+                    <br>
+
+                    I build digital products.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    My development journey has moved
+                    from frontend interfaces into
+                    full-stack applications, APIs,
+                    AI-powered products and mobile
+                    development.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I care about the entire experience:
+                    the architecture underneath,
+                    the interface people touch and
+                    the problem the product solves.
+
+                </p>
+
+            </article>
+
+
+
+            <div>
+
+
+                <div class="about-stats">
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            30+
+                        </div>
+
+                        <div class="stat-label">
+                            PROJECTS
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            AI
+                        </div>
+
+                        <div class="stat-label">
+                            SYSTEMS
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            FS
+                        </div>
+
+                        <div class="stat-label">
+                            FULL STACK
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            ∞
+                        </div>
+
+                        <div class="stat-label">
+                            CURIOSITY
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STACK
+========================================================= -->
+
+<section
+    id="stack"
+    class="section"
+>
+
+    <div class="container">
+
+
+        <div class="projects-header">
+
+            <div>
+
+                <div class="section-label">
+                    03 / TECHNOLOGY
+                </div>
+
+                <h2 class="section-title">
+
+                    THE
+                    <span class="gradient">
+                        TOOLBOX.
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <span class="project-badge">
+                        FRONTEND
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <h3 class="project-title">
+                        Interfaces
+                    </h3>
+
+                    <p class="project-description">
+
+                        Responsive interfaces,
+                        animations, layouts and
+                        interaction systems.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-footer">
+
+                    <div class="project-stack">
+
+                        <span class="tech">
+                            HTML
+                        </span>
+
+                        <span class="tech">
+                            CSS
+                        </span>
+
+                        <span class="tech">
+                            JavaScript
+                        </span>
+
+                        <span class="tech">
+                            Bootstrap
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <span class="project-badge">
+                        BACKEND
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <h3 class="project-title">
+                        Systems
+                    </h3>
+
+                    <p class="project-description">
+
+                        APIs, authentication,
+                        databases, business logic
+                        and server architecture.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-footer">
+
+                    <div class="project-stack">
+
+                        <span class="tech">
+                            Node.js
+                        </span>
+
+                        <span class="tech">
+                            Express
+                        </span>
+
+                        <span class="tech">
+                            MongoDB
+                        </span>
+
+                        <span class="tech">
+                            REST
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <span class="project-badge">
+                        AI
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <h3 class="project-title">
+                        Intelligence
+                    </h3>
+
+                    <p class="project-description">
+
+                        AI-powered applications,
+                        API integrations and
+                        intelligent workflows.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-footer">
+
+                    <div class="project-stack">
+
+                        <span class="tech">
+                            OpenAI
+                        </span>
+
+                        <span class="tech">
+                            APIs
+                        </span>
+
+                        <span class="tech">
+                            Automation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        04
+                    </span>
+
+                    <span class="project-badge">
+                        MOBILE
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <h3 class="project-title">
+                        Mobile
+                    </h3>
+
+                    <p class="project-description">
+
+                        Cross-platform mobile
+                        interfaces and applications.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-footer">
+
+                    <div class="project-stack">
+
+                        <span class="tech">
+                            Dart
+                        </span>
+
+                        <span class="tech">
+                            Flutter
+                        </span>
+
+                        <span class="tech">
+                            Firebase
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    id="contact"
+    class="section"
+>
+
+    <div class="container">
+
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-content">
+
+                <div class="section-label">
+                    04 / CONTACT
+                </div>
+
+
+                <h2 class="contact-title">
+
+                    HAVE AN
+                    <br>
+
+                    <span class="gradient">
+                        IDEA?
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="section-description"
+                    style="max-width:620px;"
+                >
+
+                    Let's turn the idea into a working
+                    digital product.
+
+                </p>
+
+
+                <a
+                    href="mailto:"
+                    class="btn btn-primary"
+                    style="margin-top:30px;"
+                >
+
+                    Start a conversation
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     AI ASSISTANT PANEL
+========================================================= -->
+
+<div
+    id="aiPanel"
+    class="ai-panel"
+    aria-hidden="true"
+>
+
+
+    <div class="ai-panel-header">
+
+        <div>
+
+            <span class="ai-status"></span>
+
+            FAITH AI
+
+        </div>
+
+
+        <button
+            id="closeAiAssistant"
+            type="button"
+            aria-label="Close AI assistant"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        id="aiMessages"
+        class="ai-messages"
+    >
+
+        <div class="ai-message ai-message-bot">
+
+            <strong>
+                FAITH AI
+            </strong>
+
+            <p>
+                Hey 👋 I'm Faith's portfolio
+                assistant. Ask me about his
+                projects, stack or experience.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form
+        id="aiForm"
+        class="ai-form"
+    >
+
+        <input
+            id="aiInput"
+            type="text"
+            placeholder="Ask me anything..."
+            autocomplete="off"
+            required
+        >
+
+        <button
+            type="submit"
+            aria-label="Send message"
+        >
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </button>
+
+    </form>
+
+</div>
+
+
+
+<!-- =========================================================
+     PROJECT MODAL
+========================================================= -->
+
+<div
+    id="projectModal"
+    class="project-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-describedby="modalDescription"
+    hidden
+>
+
+
+    <div
+        class="modal-backdrop"
+        data-close-modal
+    ></div>
+
+
+    <div class="modal-content">
+
+
+        <div class="modal-header">
+
+            <span
+                id="modalBadge"
+                class="project-badge"
+            >
+                PROJECT
+            </span>
+
+
+            <button
+                id="modalClose"
+                class="modal-close"
+                type="button"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <p class="section-label">
+                PROJECT DETAILS
+            </p>
+
+
+            <h2 id="modalTitle">
+                Project
+            </h2>
+
+
+            <p id="modalDescription">
+                Project description.
+            </p>
+
+
+            <div class="modal-actions">
+
+                <a
+                    id="modalGithub"
+                    class="btn btn-ghost"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+
+                <a
+                    id="modalLive"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    View live
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+
+        <div>
+
+            <p>
+                © <span id="year"></span>
+                Faith Tolu.
+            </p>
+
+        </div>
+
+
+        <div class="socials">
+
+            <a
+                href="https://github.com/faithinator-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social"
+                aria-label="GitHub"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+
+            <a
+                href="#contact"
+                class="social"
+                aria-label="Contact"
+            >
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+
+
+        </div>
+
+
+        <p>
+            BUILT WITH INTENT.
+        </p>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script
+    src="/js/script.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

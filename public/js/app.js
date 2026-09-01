@@ -3,6 +3,13 @@
 let projectData = []; // Global store for projects
 let activeCategory = 'All';
 
+window.onload = function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+};
 // Tab navigation logic with improved transitions
 function switchTab(tabId, element) {
     const screens = document.querySelectorAll('.screen');
@@ -114,6 +121,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === modalOverlay) closeModal();
         });
     }
+
+    // Reveal animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
 });
 
 // AI Chat logic
