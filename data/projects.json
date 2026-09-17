@@ -7,12 +7,9 @@
     "short_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
     "full_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
     "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
-    "liveLink": "#",
+    "liveLink": "",
     "githubLink": "https://github.com/faithinator-dev/insight-ink",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "EJS", "MongoDB"]
   },
   {
     "id": "gitweaver",
@@ -24,10 +21,7 @@
     "description": "A Git repository management tool with branch visualization, commit history analysis, and collaboration tools for efficient workflow.",
     "liveLink": "https://gitweaver.onrender.com/",
     "githubLink": "https://github.com/faithinator-dev/Gitweaver",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "t-konekt",
@@ -39,11 +33,7 @@
     "description": "A social media application platform featuring real-time data synchronization and messaging capabilities.",
     "liveLink": "https://t-konekt.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/t-konekt",
-    "categories": [
-      "Fullstack",
-      "SaaS",
-      "Chat"
-    ]
+    "categories": ["Bootstrap", "HTML & CSS", "Vanilla JavaScript", "Firebase"]
   },
   {
     "id": "finbuddy",
@@ -55,10 +45,7 @@
     "description": "A financial management application helping users track expenses and income with budgeting features.",
     "liveLink": "https://finbuddy-orpin.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/finbuddy",
-    "categories": [
-      "Frontend",
-      "SaaS"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "code-guardian",
@@ -70,10 +57,7 @@
     "description": "A code review tool featuring automated analysis and style enforcement.",
     "liveLink": "#",
     "githubLink": "#",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "MongoDB"]
   },
   {
     "id": "task-master",
@@ -85,10 +69,7 @@
     "description": "Organize tasks and improve productivity with assignment tracking.",
     "liveLink": "#",
     "githubLink": "#",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "MongoDB"]
   },
   {
     "id": "wa-store",
@@ -100,10 +81,7 @@
     "description": "E-commerce platform facilitating product listings and shopping cart functionality integrated with WhatsApp.",
     "liveLink": "https://wastore-ng.onrender.com",
     "githubLink": "https://github.com/faithinator-dev/WAStore.NG/",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "EJS", "MongoDB"]
   },
   {
     "id": "chatgpt-clone",
@@ -115,10 +93,7 @@
     "description": "A natural language processing chatbot mimicking AI conversational functionality.",
     "liveLink": "https://faithchatgpt.vercel.app/",
     "githubLink": " https://github.com/faithinator-dev/chatGPT-clone.git",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "OpenAI API", "Vanilla JavaScript"]
   },
   {
     "id": "weather-wise",
@@ -130,10 +105,7 @@
     "description": "Accurate weather forecasting providing current conditions and hourly forecasts.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/WeatherWise.git",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "EJS", "API"]
   },
   {
     "id": "faithinator-eddosier",
@@ -145,9 +117,7 @@
     "description": "A professional portfolio showcasing academic and technical achievements, built with Bootstrap 5.",
     "liveLink": "https://faithinator-eddosier.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Faithinator-eddosier",
-    "categories": [
-      "Portfolio"
-    ]
+    "categories": ["Bootstrap", "HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithinator-calculator",
@@ -159,10 +129,7 @@
     "description": "A feature-rich web calculator with a modern UI, demonstrating advanced CSS styling.",
     "liveLink": "https://faithinator-calculator.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/faithinator-calculator",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "spartan-online-simulator-game",
@@ -174,10 +141,7 @@
     "description": "An immersive text-based adventure game that challenges players with complex decision-making.",
     "liveLink": "https://spartan-sim.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Spartan-online-simulator-game",
-    "categories": [
-      "Portfolio",
-      "Game"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithinator-dribbble-com",
@@ -189,10 +153,7 @@
     "description": "A pixel-perfect clone of the Dribbble homepage, focusing on high-fidelity design reproduction.",
     "liveLink": "https://faithinator-dribbble.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Faithinator-dribbble.com",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithinator-credpal-clone-responsiveness-website",
@@ -204,10 +165,7 @@
     "description": "A fully responsive financial service landing page clone, emphasizing clean UI components.",
     "liveLink": "https://faithinator-credpal-clonewebsite.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Faithinator-credpal-clone-responsiveness-website",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faith-tolu-webroom",
@@ -219,9 +177,7 @@
     "description": "An experimental cloud-based lab environment for web development testing.",
     "liveLink": "https://faith-tolulab.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Faith-tolu-webroom",
-    "categories": [
-      "Portfolio"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "whizwizard",
@@ -233,10 +189,7 @@
     "description": "A sophisticated multi-user quiz platform featuring real-time synchronization and JWT authentication.",
     "liveLink": "https://whizwizard.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/whizwizard",
-    "categories": [
-      "Fullstack",
-      "SaaS"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "MongoDB", "Vanilla JavaScript"]
   },
   {
     "id": "glowing-christmas-celebration-card",
@@ -248,10 +201,7 @@
     "description": "An interactive digital greeting experience utilizing CSS animations and JavaScript.",
     "liveLink": "https://tolutekcard.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Glowing-Christmas-celebration-card",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithinator-risevest-clone",
@@ -263,10 +213,7 @@
     "description": "A high-performance clone of the Risevest hero section, featuring complex animations.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/Faithinator-risevest-clone",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["Bootstrap", "HTML & CSS"]
   },
   {
     "id": "naijagrading-system",
@@ -278,10 +225,7 @@
     "description": "A specialized academic tool designed to streamline grade calculations.",
     "liveLink": "https://9ja-grading-system.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/NaijaGrading-System",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "pinterest",
@@ -293,9 +237,7 @@
     "description": "A visual discovery engine clone featuring a masonry layout and image pinning.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/pinterest",
-    "categories": [
-      "Portfolio"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "my-30-day-js-challenge",
@@ -307,10 +249,7 @@
     "description": "A comprehensive collection of 30 specialized JavaScript projects.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/my-30-day-js-challenge",
-    "categories": [
-      "Portfolio",
-      "Learning"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithinator-ogbomoso-hub",
@@ -322,10 +261,7 @@
     "description": "A community-focused digital platform providing localized information.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/faithinator-ogbomoso-hub",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "canva-sign-in",
@@ -337,10 +273,7 @@
     "description": "A secure and intuitive authentication portal clone, mimicking the Canva experience.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/canva-sign-in",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "excellence-secondary-school",
@@ -352,10 +285,7 @@
     "description": "A robust educational management system with dedicated portals.",
     "liveLink": "https://ess-tolutek.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/Excellence-Secondary-School",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "c-meet-platform",
@@ -367,10 +297,7 @@
     "description": "A global communication platform facilitating real-time discussions.",
     "liveLink": "https://c-meet-platform.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/c-meet-platform",
-    "categories": [
-      "Portfolio",
-      "SaaS"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faith-delight-dishes",
@@ -382,10 +309,7 @@
     "description": "A culinary exploration app that helps users discover ingredients.",
     "liveLink": "https://faith-dishes.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/faith-Delight-Dishes",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "schoolboardgame",
@@ -397,10 +321,7 @@
     "description": "A digital adaptation of a classic board game.",
     "liveLink": "https://school-board-game.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/SchoolBoardGame",
-    "categories": [
-      "Portfolio",
-      "Game"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "zeroporfolioforge",
@@ -412,10 +333,7 @@
     "description": "A high-performance portfolio builder tool.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/ZeroPorfolioForge",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "student-information",
@@ -427,10 +345,7 @@
     "description": "A centralized database system for managing student records.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/student-information",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "terminal-portfolio",
@@ -442,10 +357,7 @@
     "description": "A unique, terminal-themed portfolio interface.",
     "liveLink": "https://t-faithinator.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/terminal-portfolio",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "faithanic-co",
@@ -457,10 +369,7 @@
     "description": "A premium portfolio project developed as a milestone achievement.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/faithanic.co",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "3dfaithportfolio",
@@ -472,9 +381,7 @@
     "description": "A cutting-edge 3D portfolio experience built with Three.js.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/faiththreeportfolio",
-    "categories": [
-      "Portfolio"
-    ]
+    "categories": ["Three.js", "WebGL", "Vanilla JavaScript"]
   },
   {
     "id": "ludo",
@@ -486,10 +393,7 @@
     "description": "A fully interactive, web-based Ludo game.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/day-5---ludo",
-    "categories": [
-      "Portfolio",
-      "Game"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "cowrywise",
@@ -501,10 +405,7 @@
     "description": "A meticulous reproduction of the Cowrywise financial platform.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/cowrywise",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["HTML & CSS", "Vanilla JavaScript"]
   },
   {
     "id": "nexusblog",
@@ -516,9 +417,6 @@
     "description": "A collaborative blogging ecosystem designed for seamless content creation.",
     "liveLink": "#",
     "githubLink": "https://github.com/faithinator-dev/NexusBlog",
-    "categories": [
-      "Portfolio",
-      "SQI Project"
-    ]
+    "categories": ["Full-stack", "Node.js", "Express", "EJS", "MongoDB"]
   }
 ]

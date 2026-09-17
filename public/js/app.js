@@ -1,302 +1,67 @@
-// Antigravity Portfolio Logic
+const $ = selector => document.querySelector(selector);
+const escapeHtml = value => value.replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 
-let projectData = []; // Global store for projects
-let activeCategory = 'All';
-
-window.onload = function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, 500);
-};
-// Tab navigation logic with improved transitions
-function switchTab(tabId, element) {
-    const screens = document.querySelectorAll('.screen');
-    const navItems = document.querySelectorAll('.nav-item');
-    
-    // Deactivate all screens
-    screens.forEach(s => {
-        s.classList.remove('active');
-        s.style.display = 'none';
-    });
-    
-    // Deactivate all nav items
-    navItems.forEach(n => n.classList.remove('active'));
-
-    const target = document.getElementById(tabId);
-    if (!target) return;
-
-    // Show target screen
-    target.style.display = 'block';
-    
-    // Small delay to allow display: block to take effect before adding active class for transition
-    setTimeout(() => {
-        target.classList.add('active');
-    }, 10);
-
-    if (element) element.classList.add('active');
-}
-
-// Global initialization
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation setup
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', (e) => {
-            const target = item.getAttribute('data-tab') || item.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
-            if (target) switchTab(target, item);
-        });
-    });
-
-    // Load projects from API
-    loadProjects();
-
-    // Contact form handler
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
-        const statusText = document.getElementById('formStatus');
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.style.opacity = '0.7';
-
-        try {
-            // Send to email
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, message })
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                // Also send to WhatsApp
-                const whatsappMessage = `Hello Faith,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-                const whatsappUrl = `https://wa.me/447046111023?text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappUrl, '_blank');
-
-                btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                btn.style.background = 'var(--accent-secondary)';
-                contactForm.reset();
-            } else {
-                btn.innerHTML = 'Send Message';
-                btn.style.opacity = '1';
-                statusText.hidden = false;
-                statusText.style.color = '#ef4444';
-                statusText.textContent = result.error || 'Failed to send.';
-            }
-        } catch (error) {
-            btn.innerHTML = 'Send Message';
-            btn.style.opacity = '1';
-            statusText.hidden = false;
-            statusText.style.color = '#ef4444';
-            statusText.textContent = 'Network error. Please try again.';
-        }
-
-        setTimeout(() => {
-            btn.innerHTML = 'Send Message';
-            btn.style.background = '';
-            btn.style.opacity = '1';
-            if (statusText) statusText.hidden = true;
-        }, 4000);
-    });
-
-    // Chat input handling
-    const aiInput = document.getElementById('aiInput');
-    if (aiInput) {
-        aiInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') handleAiChat();
-        });
-    }
-
-    // Modal Close on backdrop click
-    const modalOverlay = document.getElementById('projectModal');
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) closeModal();
-        });
-    }
-
-    // Reveal animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
+  $('#year').textContent = new Date().getFullYear();
+  setupMenu(); setupAssistant(); setupContactForm(); loadProjects();
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible')), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  const navLinks = document.querySelectorAll('.nav-links a');
+  new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`)); }), { rootMargin: '-35% 0px -55%' }).observe($('#home'));
 });
 
-// AI Chat logic
-async function handleAiChat() {
-    const inputField = document.getElementById('aiInput');
-    if (!inputField) return;
-    const text = inputField.value.trim();
-    if (!text) return;
-
-    const chatBox = document.getElementById('chatBox');
-    chatBox.innerHTML += `<div class="msg user">${escapeHtml(text)}</div>`;
-    inputField.value = '';
-
-    const loadingId = 'load-' + Date.now();
-    chatBox.innerHTML += `<div class="msg ai" id="${loadingId}"><i class="fas fa-ellipsis-h"></i></div>`;
-    chatBox.scrollTop = chatBox.scrollHeight;
-
-    try {
-        const response = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: text })
-        });
-
-        const result = await response.json();
-        const loader = document.getElementById(loadingId);
-        if (loader) loader.remove();
-
-        if (response.ok) {
-            chatBox.innerHTML += `<div class="msg ai">${escapeHtml(result.reply || 'No reply')}</div>`;
-        } else {
-            chatBox.innerHTML += `<div class="msg ai" style="color: #ef4444;">Sorry, I encountered an error connecting to the brain.</div>`;
-        }
-    } catch (error) {
-        const loader = document.getElementById(loadingId);
-        if (loader) loader.remove();
-        chatBox.innerHTML += `<div class="msg ai" style="color: #ef4444;">Network error. Cannot connect to the server.</div>`;
-    }
-
-    chatBox.scrollTop = chatBox.scrollHeight;
+function setupMenu() {
+  const toggle = $('.menu-toggle'), nav = $('.nav-links');
+  toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); toggle.textContent = open ? '×' : '☰'; });
+  nav.addEventListener('click', event => { if (event.target.matches('a')) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = '☰'; } });
 }
 
-function escapeHtml(text) {
-    return text.replace(/[&<>"']/g, (c) => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    }[c]));
+function setupAssistant() {
+  const launcher = $('#assistantLauncher'), panel = $('#assistantPanel'), close = $('#assistantClose'), form = $('#chatForm'), input = $('#aiInput'), box = $('#chatBox');
+  const setOpen = open => { panel.classList.toggle('open', open); panel.setAttribute('aria-hidden', !open); launcher.setAttribute('aria-expanded', open); if (open) input.focus(); };
+  launcher.addEventListener('click', () => setOpen(!panel.classList.contains('open')));
+  close.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setOpen(false); });
+  document.querySelector('.suggestions').addEventListener('click', event => { if (event.target.tagName === 'BUTTON') { input.value = event.target.textContent; form.requestSubmit(); } });
+  form.addEventListener('submit', async event => {
+    event.preventDefault(); const prompt = input.value.trim(); if (!prompt) return;
+    addMessage(prompt, 'user'); input.value = ''; const loader = addMessage('Thinking…', 'ai');
+    try { const response = await fetch('/api/chat', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ prompt }) }); const result = await response.json(); loader.remove(); addMessage(response.ok ? (result.reply || 'I could not generate a response.') : 'Sorry, I could not connect right now. Please try again shortly.', response.ok ? 'ai' : 'ai error'); }
+    catch { loader.remove(); addMessage('Network error. Please check your connection and try again.', 'ai error'); }
+  });
+  function addMessage(message, type) { const messageEl = document.createElement('div'); messageEl.className = `chat-message ${type}`; messageEl.innerHTML = escapeHtml(message).replace(/\n/g, '<br>'); box.appendChild(messageEl); box.scrollTop = box.scrollHeight; return messageEl; }
 }
 
-// Function to load and render projects from your Node API
+function setupContactForm() {
+  const form = $('#contactForm'), button = $('#submitBtn'), status = $('#formStatus');
+  form.addEventListener('submit', async event => { event.preventDefault(); const data = { name: $('#name').value.trim(), email: $('#email').value.trim(), message: $('#message').value.trim() }; button.disabled = true; button.textContent = 'Sending…'; status.textContent = ''; try { const response = await fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) }); const result = await response.json(); if (!response.ok) throw new Error(result.error); status.textContent = 'Message sent — thank you! I’ll be in touch soon.'; form.reset(); } catch (error) { status.textContent = error.message || 'Could not send your message. Please email me directly.'; } finally { button.disabled = false; button.innerHTML = 'Send message <span>→</span>'; } });
+}
+
 async function loadProjects() {
-    const projectGrid = document.getElementById('project-grid');
-    if (!projectGrid) return;
-
-    try {
-        const response = await fetch('/api/projects'); 
-        projectData = await response.json();
-
-        renderCategoryFilters();
-        renderProjects();
-
-    } catch (error) {
-        console.error("Error loading projects:", error);
-        projectGrid.innerHTML = `<p style="text-align: center; color: var(--text-muted);">Projects currently unavailable.</p>`;
-    }
+  const grid = $('#project-grid'), filters = $('#project-filters'), moreButton = $('#showMoreProjects');
+  try {
+    const response = await fetch('/api/projects'); if (!response.ok) throw new Error();
+    const projects = await response.json(), categories = ['All', ...new Set(projects.flatMap(project => project.categories || []))];
+    let selected = 'All', expanded = false;
+    const render = () => {
+      const filtered = projects.filter(project => selected === 'All' || project.categories.includes(selected));
+      const visible = expanded ? filtered : filtered.slice(0, 9);
+      filters.innerHTML = categories.map(category => `<button class="${category === selected ? 'active' : ''}" data-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`).join('');
+      grid.innerHTML = visible.map(project => projectCard(project)).join('');
+      const hasMore = filtered.length > 9; moreButton.hidden = !hasMore; moreButton.innerHTML = expanded ? 'Show fewer projects <span>↑</span>' : `See all ${filtered.length} projects <span>↓</span>`;
+    };
+    filters.addEventListener('click', event => { if (event.target.matches('button')) { selected = event.target.dataset.category; expanded = false; render(); } });
+    moreButton.addEventListener('click', () => { expanded = !expanded; render(); if (!expanded) $('#portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    render();
+  } catch { grid.innerHTML = '<p>Projects are unavailable right now. Please visit my GitHub to see more.</p>'; }
 }
 
-function renderCategoryFilters() {
-    const filterContainer = document.getElementById('project-filters');
-    if (!filterContainer) return;
-
-    const categories = [...new Set(projectData.flatMap(project => Array.isArray(project.categories) ? project.categories : []))]
-        .sort((a, b) => a.localeCompare(b));
-
-    filterContainer.innerHTML = '';
-
-    const allButton = document.createElement('button');
-    allButton.className = `skill-tag glass ${activeCategory === 'All' ? 'active' : ''}`;
-    allButton.textContent = 'All';
-    allButton.onclick = () => setActiveCategory('All');
-    filterContainer.appendChild(allButton);
-
-    categories.forEach(category => {
-        const button = document.createElement('button');
-        button.className = `skill-tag glass ${activeCategory === category ? 'active' : ''}`;
-        button.textContent = category;
-        button.onclick = () => setActiveCategory(category);
-        filterContainer.appendChild(button);
-    });
+function projectCard(project) {
+  const hasLivePreview = project.liveLink && project.liveLink !== '#';
+  const liveUrl = hasLivePreview ? project.liveLink.replace(/"/g, '%22') : '';
+  return `<article class="project-card"><div class="project-art ${hasLivePreview ? 'has-preview' : ''}">${hasLivePreview ? `<iframe class="project-preview" title="Preview of ${escapeHtml(project.title)}" src="${liveUrl}" loading="lazy" tabindex="-1"></iframe>` : ''}<i>${escapeHtml(project.badge)}</i><span>${escapeHtml(project.title.charAt(0))}</span></div><div class="project-body"><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.short_description || project.description || '')}</p><div class="project-links">${hasLivePreview ? `<a href="${liveUrl}" target="_blank" rel="noopener">Live ↗</a>` : ''}${project.githubLink && project.githubLink !== '#' ? `<a href="${project.githubLink.trim()}" target="_blank" rel="noopener">Code ↗</a>` : ''}</div></div></article>`;
 }
 
-function setActiveCategory(category) {
-    activeCategory = category;
-    renderCategoryFilters();
-    renderProjects();
-}
-
-function renderProjects() {
-    const projectGrid = document.getElementById('project-grid');
-    if (!projectGrid) return;
-
-    const filteredProjects = activeCategory === 'All'
-        ? projectData
-        : projectData.filter(project => Array.isArray(project.categories) && project.categories.includes(activeCategory));
-
-    projectGrid.innerHTML = '';
-
-    if (!filteredProjects.length) {
-        projectGrid.innerHTML = '<p style="text-align: center; color: var(--text-muted);">No projects found for this category.</p>';
-        return;
-    }
-
-    filteredProjects.forEach((project, index) => {
-        const floatClass = `float-${(index % 3) + 1}`;
-        const displayDesc = project.short_description || project.description || '';
-        const categories = Array.isArray(project.categories) ? project.categories : [];
-
-        const cardHTML = `
-            <div class="glass-card glass ${floatClass}" style="cursor: pointer;" onclick="showProjectDetails('${project.id}')">
-                <h3>${project.title}</h3>
-                <p style="color: ${project.badgeColor || 'var(--accent-primary)'}; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
-                    ${project.badge || 'PROJECT'}
-                </p>
-                <p>${displayDesc.length > 100 ? displayDesc.substring(0, 100) + '...' : displayDesc}</p>
-                <div class="project-card-meta">
-                    ${categories.map(category => `<span class="project-category-pill">${category}</span>`).join('')}
-                </div>
-            </div>
-        `;
-        projectGrid.innerHTML += cardHTML;
-    });
-}
-
-// Modal Logic
-function showProjectDetails(id) {
-    const project = projectData.find(p => p.id === id);
-    if (!project) return;
-
-    document.getElementById('modalTitle').textContent = project.title;
-    document.getElementById('modalBadge').textContent = project.badge;
-    document.getElementById('modalBadge').style.color = project.badgeColor;
-    document.getElementById('modalDescription').textContent = project.full_description || project.description;
-
-    const liveBtn = document.getElementById('modalLive');
-    const githubBtn = document.getElementById('modalGithub');
-
-    if (project.liveLink && project.liveLink !== '#') {
-        liveBtn.style.display = 'flex';
-        liveBtn.href = project.liveLink;
-    } else {
-        liveBtn.style.display = 'none';
-    }
-
-    if (project.githubLink && project.githubLink !== '#') {
-        githubBtn.style.display = 'flex';
-        githubBtn.href = project.githubLink;
-    } else {
-        githubBtn.style.display = 'none';
-    }
-
-    document.getElementById('projectModal').classList.add('active');
-}
-
-function closeModal() {
-    document.getElementById('projectModal').classList.remove('active');
-}
+const previewStyle = document.createElement('style');
+previewStyle.textContent = '.portfolio-more{display:flex;justify-content:center;margin-top:28px}.portfolio-more .button{min-width:170px}.project-art{height:145px;position:relative;overflow:hidden}.project-preview{position:absolute;inset:0;width:312.5%;height:312.5%;border:0;background:#0b1c48;pointer-events:none;transform:scale(.32);transform-origin:top left;opacity:.75}.project-art.has-preview:after{content:"Live preview";position:absolute;bottom:9px;left:11px;padding:4px 7px;border-radius:99px;background:rgba(4,13,32,.72);color:#dceeff;font:500 .52rem "DM Mono",monospace;z-index:2}.project-art.has-preview:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,13,32,.45),transparent 55%);z-index:1}.project-art i,.project-art span{z-index:2}';
+document.head.appendChild(previewStyle);
