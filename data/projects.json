@@ -7,7 +7,7 @@
     "short_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
     "full_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
     "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
-    "liveLink": "",
+    "liveLink": "https://insight-ink-alpha.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/insight-ink",
     "categories": ["Full-stack", "Node.js", "Express", "EJS", "MongoDB"]
   },
@@ -56,7 +56,7 @@
     "full_description": "A code review tool featuring automated analysis and style enforcement. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
     "description": "A code review tool featuring automated analysis and style enforcement.",
     "liveLink": "#",
-    "githubLink": "#",
+    "githubLink": " https://github.com/faithinator-dev/code-guardian.git",
     "categories": ["Full-stack", "Node.js", "Express", "MongoDB"]
   },
   {
@@ -68,7 +68,7 @@
     "full_description": "Organize tasks and improve productivity with assignment tracking. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
     "description": "Organize tasks and improve productivity with assignment tracking.",
     "liveLink": "#",
-    "githubLink": "#",
+    "githubLink": " https://github.com/faithinator-dev/TaskMaster.git",
     "categories": ["Full-stack", "Node.js", "Express", "MongoDB"]
   },
   {
