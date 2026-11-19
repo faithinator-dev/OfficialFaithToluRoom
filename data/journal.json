@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "designing-rest-apis-around-resources",
+    "title": "Designing REST APIs around resources, not screens",
+    "category": "BACKEND ENGINEERING",
+    "date": "Engineering notes",
+    "readTime": "5 min read",
+    "excerpt": "A useful API should model the domain clearly so multiple clients can use it without duplicating business rules.",
+    "intro": "When an application has a web client and a mobile client, it is tempting to build endpoints around each screen. A more durable starting point is to identify the resources and actions in the domain.",
+    "sections": [
+      {
+        "heading": "Start with the domain",
+        "body": "List the things the system manages: users, products, invoices, attendance records or articles. These become the starting point for resource-oriented routes."
+      },
+      {
+        "heading": "Keep business rules on the server",
+        "body": "The browser and mobile app should present state and collect input. Validation, authorization and important state transitions belong on the server so every client follows the same rules."
+      },
+      {
+        "heading": "Design for more than one client",
+        "body": "A consistent API contract lets a web interface and a mobile app share backend behavior. It also makes testing and future client development easier."
+      },
+      {
+        "heading": "Make errors predictable",
+        "body": "Return clear status codes and structured error responses. Predictable failures are part of a good API, not an afterthought."
+      }
+    ],
+    "takeaway": "Model the business capability once, then let different interfaces use it."
+  },
+  {
+    "slug": "thinking-about-payment-states",
+    "title": "Thinking in payment states, not just a Pay button",
+    "category": "PRODUCT ENGINEERING",
+    "date": "Engineering notes",
+    "readTime": "4 min read",
+    "excerpt": "Invoice and payment interfaces need an explicit model of pending, paid and failed states—especially when a prototype is not yet connected to a live provider.",
+    "intro": "A payment button is only one moment in a longer workflow. The application also needs to represent what happened after the customer tried to pay.",
+    "sections": [
+      {
+        "heading": "Separate intent from confirmation",
+        "body": "A customer clicking Pay does not prove that money moved. The application should wait for a trusted provider confirmation before marking a real invoice as paid."
+      },
+      {
+        "heading": "Define the states",
+        "body": "A simple prototype may distinguish draft, pending, paid, failed and cancelled. The exact states should match the provider and product requirements."
+      },
+      {
+        "heading": "Keep demo behavior honest",
+        "body": "A demo can simulate a successful payment to help people understand the experience, but it should be visibly identified as a demo and must not be confused with a live transaction."
+      },
+      {
+        "heading": "Plan for asynchronous updates",
+        "body": "Production payment systems commonly notify the backend asynchronously. The backend should verify those notifications and update the invoice record safely."
+      }
+    ],
+    "takeaway": "A trustworthy payment experience depends on accurate state, not just polished screens."
+  },
+  {
+    "slug": "testing-a-chess-engine-in-real-play",
+    "title": "Testing a chess engine beyond whether it compiles",
+    "category": "BUILDING IN PUBLIC",
+    "date": "Engineering notes",
+    "readTime": "4 min read",
+    "excerpt": "A chess engine needs repeatable checks for legal moves, search behavior and playing strength—not only a successful build.",
+    "intro": "Getting an engine to compile is an important milestone, but it says very little about how reliably it plays. Testing needs to cover both correctness and practical behavior.",
+    "sections": [
+      {
+        "heading": "Check move correctness",
+        "body": "Start with positions that have known legal moves and verify that the engine never returns an illegal move."
+      },
+      {
+        "heading": "Use repeatable positions",
+        "body": "A small set of saved positions makes it easier to compare changes and catch regressions as evaluation and search evolve."
+      },
+      {
+        "heading": "Observe practical play",
+        "body": "Play games against the engine at different settings. Record obvious weaknesses, opening behavior and decisions that look inconsistent."
+      },
+      {
+        "heading": "Change one thing at a time",
+        "body": "When a test exposes a weakness, make a focused change and rerun the same checks. That makes improvements easier to understand."
+      }
+    ],
+    "takeaway": "A working engine is a starting point; repeatable testing is how it becomes dependable."
+  }
+]
