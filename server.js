@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public'), { index: false }));
 app.use('/api', require('./routes/contact'));
 app.use('/api', require('./routes/chat'));
 app.use('/api', require('./routes/projects'));
+app.use('/', require('./routes/pages'));
 
 app.get('/', (req, res) => {
   res.render('index', {
