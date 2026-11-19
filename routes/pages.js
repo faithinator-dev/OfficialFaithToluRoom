@@ -32,7 +32,7 @@ router.get('/journal', (req, res) => {
 });
 
 router.get('/journal/:slug', (req, res) => {
-  const article = readData('journal.json').find(item => item.slug === req.params.slug);
+  const article = journalArticles.find(item => item.slug === req.params.slug);
   if (!article) return res.status(404).render('not-found', { title: 'Article not found', description: 'The requested article could not be found.' });
   res.render('article', {
     title: `${article.title} — Engineering journal`,
