@@ -46,14 +46,14 @@
       const response = await fetch('/api/projects', { headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error('Projects request failed');
       const projects = await response.json();
-      const featured = projects.filter(project => project && project.title && project.short_description)
-        .filter(project => !['#', ''].includes(project.liveLink) || !['#', ''].includes((project.githubLink || '').trim()))
+      const featured = projects.filter(project => project && project.featured === true && project.title && project.short_description)
         .slice(0, 6);
       if (!featured.length) throw new Error('No projects available');
       projectGrid.innerHTML = featured.map(project => {
         const live = safeUrl(project.liveLink);
         const code = safeUrl((project.githubLink || '').trim());
-        const links = [live ? `<a href="${live}" target="_blank" rel="noopener noreferrer">Live ↗</a>` : '', code ? `<a href="${code}" target="_blank" rel="noopener noreferrer">Code ↗</a>` : ''].filter(Boolean).join('');
+        const caseStudy = project.caseStudySlug ? `<a href="/work/${encodeURIComponent(project.caseStudySlug)}">Case study ↗</a>` : '';
+        const links = [caseStudy, live ? `<a href="${live}" target="_blank" rel="noopener noreferrer">Live ↗</a>` : '', code ? `<a href="${code}" target="_blank" rel="noopener noreferrer">Code ↗</a>` : ''].filter(Boolean).join('');
         const tags = (Array.isArray(project.categories) ? project.categories : []).slice(0, 4).map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
         return `<article class="project-card"><div class="project-top"><span class="folder-icon" aria-hidden="true">▱</span><div class="project-links">${links}</div></div><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.short_description)}</p><div class="project-tags">${tags}</div></article>`;
       }).join('');
