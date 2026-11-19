@@ -312,3 +312,20 @@ h1 span { color: #d4e0e7; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Secondary-page navigation has no drawer toggle: keep it as a compact inline row. */
+@media (max-width: 760px) {
+  .page-site-header { height: auto; min-height: 74px; }
+  .page-site-header .header-inner {
+    min-height: 74px; height: auto; padding-block: 13px;
+    align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .page-site-header .page-nav {
+    position: static; top: auto; right: auto; width: 100%;
+    padding: 9px 0 1px; display: flex; flex-direction: row;
+    align-items: center; flex-wrap: wrap; gap: 8px 17px;
+    background: transparent; border: 0; box-shadow: none;
+    transform: none;
+  }
+  .page-site-header .page-nav a { font-size: .65rem; }
+}
