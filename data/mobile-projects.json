@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "fitlife",
+    "name": "FitLife Gym Management",
+    "type": "Flutter mobile app",
+    "status": "In progress",
+    "summary": "A school project exploring a Flutter mobile client connected to a shared PHP REST API backend.",
+    "platforms": [
+      "Android"
+    ],
+    "stack": [
+      "Dart",
+      "Flutter",
+      "PHP",
+      "MySQL",
+      "REST API"
+    ],
+    "details": "The project is planned as a shared system: a web interface and Android app use the same backend API. Current work is focused on a realistic MVP and learning the integration step by step.",
+    "link": ""
+  },
+  {
+    "slug": "sqi-checkmate-arena",
+    "name": "SQI Checkmate Arena",
+    "type": "Flutter mobile app",
+    "status": "In progress",
+    "summary": "A chess-club application concept for organizing a campus chess community and its activities.",
+    "platforms": [
+      "Android"
+    ],
+    "stack": [
+      "Dart",
+      "Flutter",
+      "Supabase (planned)"
+    ],
+    "details": "The project is being approached UI-first, with backend integration planned after the core experience and screens are established.",
+    "link": ""
+  },
+  {
+    "slug": "oyo-empire",
+    "name": "Oyo Empire Strategy Game",
+    "type": "Flutter game",
+    "status": "Prototype",
+    "summary": "A strategy-game prototype inspired by the history and political structure of the Oyo Empire.",
+    "platforms": [
+      "Android"
+    ],
+    "stack": [
+      "Dart",
+      "Flutter",
+      "Riverpod",
+      "Drift",
+      "SQLite"
+    ],
+    "details": "The prototype explores a turn-and-time-driven management experience, with an emphasis on representing institutions, decisions and historical context thoughtfully.",
+    "link": ""
+  }
+]
