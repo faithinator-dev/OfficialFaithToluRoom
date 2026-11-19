@@ -1,0 +1,125 @@
+[
+  {
+    "slug": "gitweaver",
+    "title": "Gitweaver",
+    "eyebrow": "DEVELOPER TOOLING · WEB APPLICATION",
+    "summary": "A Git repository companion focused on making repository activity easier to explore.",
+    "status": "Built",
+    "role": "Full-stack development",
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "GitHub OAuth",
+      "HTML",
+      "CSS"
+    ],
+    "problem": "Repository work can become difficult to follow when branch activity, commit history and collaboration context are spread across different views.",
+    "approach": "Gitweaver brings repository information into one focused interface. The project explores a server-backed workflow for connecting a GitHub identity and presenting repository activity in a more approachable way.",
+    "architecture": [
+      "Express handles application routes and server-side requests.",
+      "GitHub OAuth provides the account-connection flow.",
+      "The interface presents repository, branch and commit information."
+    ],
+    "decisions": [
+      "Keep the application centered on repository workflows rather than trying to recreate all of GitHub.",
+      "Separate server-side integration concerns from the browser interface.",
+      "Use a focused feature set that can be extended as the product grows."
+    ],
+    "learning": "This project strengthened my understanding of OAuth-based integrations and the importance of designing around a clear developer workflow.",
+    "live": "https://gitweaver.onrender.com/",
+    "github": "https://github.com/faithinator-dev/Gitweaver"
+  },
+  {
+    "slug": "wa-store",
+    "title": "WA-Store",
+    "eyebrow": "COMMERCE · BACKEND-DRIVEN WEB APP",
+    "summary": "A small-commerce storefront concept that connects product discovery with WhatsApp conversations.",
+    "status": "Built",
+    "role": "Full-stack development",
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "EJS"
+    ],
+    "problem": "Small sellers need a straightforward way to present products online while keeping customer conversations close to the channels they already use.",
+    "approach": "WA-Store combines a product catalogue and shopping flow with WhatsApp as a familiar communication channel between seller and customer.",
+    "architecture": [
+      "Express provides the application routes and server-side request handling.",
+      "MongoDB stores product and application data.",
+      "EJS renders server-side views for the storefront.",
+      "WhatsApp links connect product interest to a seller conversation."
+    ],
+    "decisions": [
+      "Keep the buying journey simple for small vendors.",
+      "Use a familiar messaging channel instead of assuming every seller needs a complex checkout stack.",
+      "Keep product and presentation concerns separate."
+    ],
+    "learning": "The project helped me think about practical commerce workflows and how backend choices should fit the business model rather than add unnecessary complexity.",
+    "live": "https://wastore-ng.onrender.com/",
+    "github": "https://github.com/faithinator-dev/WAStore.NG/"
+  },
+  {
+    "slug": "insight-ink",
+    "title": "Insight-Ink",
+    "eyebrow": "CONTENT PLATFORM · FULL-STACK",
+    "summary": "A blogging platform exploring authenticated publishing and dynamic content management.",
+    "status": "Built",
+    "role": "Full-stack development",
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "EJS",
+      "MongoDB"
+    ],
+    "problem": "A publishing platform needs more than a page that displays articles: it needs a way to manage content and associate actions with authenticated users.",
+    "approach": "Insight-Ink explores a full-stack publishing workflow with user authentication and dynamic content management.",
+    "architecture": [
+      "Express coordinates application routes and server-side logic.",
+      "MongoDB stores application and content records.",
+      "EJS supports server-rendered page views.",
+      "Authentication gates user-specific publishing actions."
+    ],
+    "decisions": [
+      "Treat content management as a first-class workflow.",
+      "Keep persistence on the server rather than relying on browser-only state.",
+      "Use server-rendered views for a straightforward application structure."
+    ],
+    "learning": "Building this project gave me practical experience connecting authentication, persistence and content workflows in one application.",
+    "live": "",
+    "github": "https://github.com/faithinator-dev/insight-ink"
+  },
+  {
+    "slug": "asopay",
+    "title": "AsoPay",
+    "eyebrow": "FINTECH CONCEPT · INVOICE WORKFLOW",
+    "summary": "An invoice-management prototype designed around the day-to-day workflow of tailors and small businesses.",
+    "status": "Prototype",
+    "role": "Product and full-stack prototyping",
+    "stack": [
+      "JavaScript",
+      "Web platform",
+      "Supabase",
+      "Payment integration concepts"
+    ],
+    "problem": "Independent tailors need a simple way to prepare invoices, share payment details and keep track of whether a customer has paid.",
+    "approach": "AsoPay focuses on invoice creation and customer-facing invoice views, with a demo payment flow used to explore the payment experience.",
+    "architecture": [
+      "Seller-facing screens support invoice creation and management.",
+      "A shareable invoice view gives customers the payment context.",
+      "Payment states are reflected in the interface for the prototype flow.",
+      "A live payment integration must be separately configured and verified before real-money use."
+    ],
+    "decisions": [
+      "Design the seller and customer journeys as connected but distinct experiences.",
+      "Make payment status visible instead of treating invoice creation as the end of the workflow.",
+      "Keep demo payment behavior clearly separated from production payment processing."
+    ],
+    "learning": "This prototype pushed me to think beyond screens and consider state transitions, customer handoff and the trust required in payment-related products.",
+    "live": "https://asopay-ogbomosho.vercel.app/",
+    "github": ""
+  }
+]
