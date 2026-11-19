@@ -3,7 +3,10 @@
   "framework": "express",
   "functions": {
     "server.js": {
-      "includeFiles": "views/**/*"
+      "includeFiles": [
+        "views/**/*",
+        "data/**/*"
+      ]
     }
   }
 }
