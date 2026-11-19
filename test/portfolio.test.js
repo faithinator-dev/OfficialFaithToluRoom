@@ -51,7 +51,7 @@ test('projects API returns a JSON array', async () => {
   await withServer(async base => {
     const response = await fetch(`${base}/api/projects`);
     assert.equal(response.status, 200);
-    assert.match(response.headers.get('content-type'), /application\\/json/);
+    assert.match(response.headers.get('content-type'), /application/);
     const projects = await response.json();
     assert.ok(Array.isArray(projects));
     assert.ok(projects.some(project => project.id === 'asopay'));
