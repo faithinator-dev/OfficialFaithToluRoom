@@ -1,11 +1,12 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
 
-const readData = (name) => require(path.join(__dirname, '../data', name));
+const caseStudies = require('../data/case-studies.json');
+const mobileProjects = require('../data/mobile-projects.json');
+const journalArticles = require('../data/journal.json');
 
 router.get('/work/:slug', (req, res) => {
-  const project = readData('case-studies.json').find(item => item.slug === req.params.slug);
+  const project = caseStudies.find(item => item.slug === req.params.slug);
   if (!project) return res.status(404).render('not-found', { title: 'Project not found', description: 'The requested project could not be found.' });
   res.render('case-study', {
     title: `${project.title} — Faith Toluwanimi`,
@@ -18,7 +19,7 @@ router.get('/mobile', (req, res) => {
   res.render('mobile', {
     title: 'Mobile development — Faith Toluwanimi',
     description: 'Flutter and Dart projects, prototypes and mobile engineering work.',
-    projects: readData('mobile-projects.json')
+    projects: mobileProjects
   });
 });
 
@@ -26,7 +27,7 @@ router.get('/journal', (req, res) => {
   res.render('journal', {
     title: 'Engineering journal — Faith Toluwanimi',
     description: 'Notes on backend engineering, product decisions and learning through building.',
-    articles: readData('journal.json')
+    articles: journalArticles
   });
 });
 
