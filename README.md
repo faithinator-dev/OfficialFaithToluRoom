@@ -25,3 +25,16 @@ The portfolio homepage is rendered from `views/index.ejs`. Static assets live in
 - `GEMINI_API_KEY` — optional AI assistant endpoint.
 
 Never commit real credentials or API keys.
+
+
+## Portfolio sections
+
+- `/` — personal introduction and selected projects
+- `/work/:slug` — project case studies
+- `/mobile` — Flutter and Dart projects, with honest progress labels
+- `/journal` — engineering notes
+- `/journal/:slug` — individual journal articles
+
+## Quality checks
+
+Run `npm test` to execute the Node.js route and API smoke tests. Run `npm install` after pulling changes so the EJS dependency is reflected in your local lockfile, then run `npm test` and `npm start`.
