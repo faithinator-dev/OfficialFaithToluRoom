@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a192f"><meta name="description" content="<%= description %>">
+  <meta property="og:title" content="<%= title %>"><meta property="og:description" content="<%= description %>"><meta property="og:type" content="article">
+  <link rel="canonical" href="https://coft-teal.vercel.app/work/<%= project.slug %>">
+  <meta name="twitter:card" content="summary">
+  <title><%= title %></title><link rel="stylesheet" href="/css/portfolio.css">
+  <link rel="stylesheet" href="/css/premium-polish.css">
+  <link rel="stylesheet" href="/css/reference-design-system.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header page-site-header"><div class="header-inner"><a class="wordmark" href="/"><span class="wordmark-mark">F</span><span>faith<span class="wordmark-dot">.</span></span></a><nav class="primary-nav page-nav" aria-label="Page navigation"><a href="/">Home</a><a href="/#work">Selected work</a><a href="/mobile">Mobile</a><a href="/journal">Journal</a></nav></div></header>
+  <main id="content" class="page-width detail-page">
+    <a class="back-link" href="/#work">← Back to selected work</a>
+    <p class="eyebrow"><span class="eyebrow-line"></span><%= project.eyebrow %></p>
+    <div class="detail-hero"><div><h1 class="detail-title"><%= project.title %><span>.</span></h1><p class="detail-summary"><%= project.summary %></p><div class="detail-meta"><span><%= project.status %></span><span><%= project.role %></span></div><div class="detail-actions"><% if (project.live) { %><a class="button button-primary" href="<%= project.live %>" target="_blank" rel="noopener noreferrer">Visit project ↗</a><% } %><% if (project.github) { %><a class="text-link" href="<%= project.github %>" target="_blank" rel="noopener noreferrer">View source ↗</a><% } %></div></div><aside class="detail-aside"><span class="note-label">PROJECT STACK</span><div class="tag-list"><% project.stack.forEach(item => { %><span><%= item %></span><% }) %></div></aside></div>
+    <div class="case-layout">
+      <article class="case-content">
+        <section><p class="section-kicker">01 / THE PROBLEM</p><h2>What needed solving</h2><p><%= project.problem %></p></section>
+        <section><p class="section-kicker">02 / THE APPROACH</p><h2>How I approached it</h2><p><%= project.approach %></p></section>
+        <section><p class="section-kicker">03 / ARCHITECTURE</p><h2>How the pieces fit</h2><ul><% project.architecture.forEach(item => { %><li><%= item %></li><% }) %></ul></section>
+        <section><p class="section-kicker">04 / DECISIONS</p><h2>Important decisions</h2><ul><% project.decisions.forEach(item => { %><li><%= item %></li><% }) %></ul></section>
+        <section><p class="section-kicker">05 / REFLECTION</p><h2>What I learned</h2><p><%= project.learning %></p></section>
+      </article>
+      <aside class="case-sidebar"><span class="note-label">TECHNOLOGIES</span><div class="tag-list"><% project.stack.forEach(item => { %><span><%= item %></span><% }) %></div><a class="inline-link" href="/journal">Read engineering notes <span>↗</span></a></aside>
+    </div>
+  </main>
+  <footer class="site-footer page-width"><a class="wordmark" href="/"><span class="wordmark-mark">F</span><span>faith<span class="wordmark-dot">.</span></span></a><p>Designed & built by Faith Toluwanimi.</p><span>© <%= new Date().getFullYear() %></span><a href="#content" class="back-top">Back to top ↑</a></footer>
+</body></html>

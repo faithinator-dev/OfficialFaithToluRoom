@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a192f">
+  <meta name="description" content="<%= description %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://coft-teal.vercel.app/">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:site_name" content="Faith Toluwanimi">
+  <title><%= title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <link rel="stylesheet" href="/css/premium-polish.css">
+  <link rel="stylesheet" href="/css/reference-design-system.css">
+  <script src="/js/portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#home" aria-label="Faith Toluwanimi home"><span class="wordmark-mark">F</span><span>faith<span class="wordmark-dot">.</span></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#about"><span>01.</span> About</a>
+        <a href="#work"><span>02.</span> Work</a>
+        <a href="/mobile"><span>03.</span> Mobile</a>
+        <a href="/journal"><span>04.</span> Journal</a>
+        <a href="#stack"><span>05.</span> Stack</a>
+        <a href="#contact"><span>06.</span> Contact</a>
+        <a class="resume-link" href="mailto:faithinator.faithanic@gmail.com?subject=CV%20request">Resume ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="home" class="hero page-width">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Hello, my name is</p>
+        <h1>Faith<br><span>Toluwanimi.</span></h1>
+        <h2>Software Engineer · Full-stack &amp; Mobile Developer</h2>
+        <p class="hero-description">I build full-stack web applications with JavaScript, Node.js and Express, and I’m developing native mobile applications with Dart and Flutter. My focus is backend systems, thoughtful architecture and products that solve practical problems.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work <span>↘</span></a>
+          <a class="text-link" href="#contact">Let's talk <span>↗</span></a>
+        </div>
+        <div class="hero-meta"><span><i class="status-dot"></i> Building from Nigeria</span><span>Open to meaningful opportunities</span></div>
+      </div>
+      <aside class="hero-aside" aria-label="A snapshot of my development workspace">
+        <div class="workspace-glow"></div>
+        <div class="workspace-orbit workspace-orbit-one"></div>
+        <div class="workspace-orbit workspace-orbit-two"></div>
+        <div class="workspace-card">
+          <div class="workspace-topbar"><span class="window-dots"><i></i><i></i><i></i></span><span>FAITH / WORKSPACE</span><span class="workspace-live"><i></i> AVAILABLE</span></div>
+          <div class="workspace-body">
+            <div class="workspace-rail"><span class="rail-active">⌘</span><span>⌁</span><span>◇</span><span>⌗</span></div>
+            <div class="workspace-main">
+              <div class="workspace-breadcrumb">~/projects / overview</div>
+              <div class="workspace-heading">Building useful<br><em>things with code.</em></div>
+              <div class="workspace-code"><span class="code-muted">01</span> <b>const</b> focus = <strong>'backend systems'</strong>;<br><span class="code-muted">02</span> <b>const</b> mobile = <strong>'Flutter + Dart'</strong>;<br><span class="code-muted">03</span> <b>ship</b>(ideas, <i>'with intention'</i>);</div>
+              <div class="workspace-bottom"><span><i></i> NODE.JS</span><span>EXPRESS</span><span>FLUTTER</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="workspace-float float-top"><span class="float-icon">⌘</span><span><small>PRIMARY FOCUS</small><strong>Backend engineering</strong></span></div>
+        <div class="workspace-float float-bottom"><span class="float-icon">◈</span><span><small>ALSO EXPLORING</small><strong>Mobile experiences</strong></span></div>
+        <div class="aside-caption">Thoughtful systems. Useful experiences.</div>
+      </aside>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+    </section>
+
+    <section id="about" class="section page-width">
+      <div class="section-label"><span>01</span> A little about me</div>
+      <div class="about-layout">
+        <div class="section-intro"><h2>Engineering with<br><em>intention.</em></h2></div>
+        <div class="about-copy">
+          <p class="lead">I’m Faith — a developer who cares about how things work just as much as how they feel to use.</p>
+          <p>My work spans the web stack: shaping interfaces with HTML, CSS and JavaScript, building server-side applications with Node.js and Express, and working with MongoDB and SQL databases. I’m also studying native mobile development with Dart and Flutter.</p>
+          <p>I learn by building. Each project is an opportunity to understand a problem more deeply, make better engineering decisions and ship something useful.</p>
+          <a class="inline-link" href="https://github.com/faithinator-dev" target="_blank" rel="noreferrer">More of my code on GitHub <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="page-width">
+        <div class="section-label"><span>02</span> Selected work</div>
+        <div class="work-heading"><h2>Things I've<br><em>been building.</em></h2><p>A closer look at selected products, the problems behind them and the engineering decisions that shaped them.</p></div>
+        <div id="project-grid" class="project-grid" aria-live="polite">
+          <article class="project-placeholder"><span>Loading selected projects…</span></article>
+        </div>
+        <div class="work-footer"><a class="inline-link" href="/mobile">Explore mobile projects <span>↗</span></a><a class="inline-link" href="/journal">Read the engineering journal <span>↗</span></a><a class="inline-link" href="https://github.com/faithinator-dev?tab=repositories" target="_blank" rel="noreferrer">Explore all repositories <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="stack" class="section page-width">
+      <div class="section-label"><span>03</span> Tools of the trade</div>
+      <div class="stack-layout">
+        <div><h2>My current<br><em>toolkit.</em></h2><p class="stack-intro">A practical set of tools I use to design, build, connect and improve digital products.</p></div>
+        <div class="stack-groups">
+          <div class="stack-group"><h3>Web & backend</h3><div class="tag-list"><span>JavaScript</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>HTML</span><span>CSS</span><span>EJS</span></div></div>
+          <div class="stack-group"><h3>Data & services</h3><div class="tag-list"><span>MongoDB</span><span>SQL</span><span>Firebase</span><span>Authentication</span></div></div>
+          <div class="stack-group"><h3>Mobile</h3><div class="tag-list"><span>Dart</span><span>Flutter</span></div><p class="stack-note">Currently developing my mobile engineering skills through hands-on study and projects.</p></div>
+          <div class="stack-group"><h3>Workflow</h3><div class="tag-list"><span>Git</span><span>GitHub</span><span>Vercel</span><span>Render</span><span>Termux</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section principles-section">
+      <div class="page-width principles-inner">
+        <div class="section-label"><span>04</span> How I approach the work</div>
+        <h2>Good software is more<br>than <em>working code.</em></h2>
+        <div class="principle-grid">
+          <article><span>01 / Clarity</span><h3>Understand first.</h3><p>Start with the problem, the people using the product and the outcome that matters.</p></article>
+          <article><span>02 / Craft</span><h3>Care about details.</h3><p>Build interfaces and systems that are considered, accessible and maintainable.</p></article>
+          <article><span>03 / Growth</span><h3>Keep getting better.</h3><p>Stay curious, test assumptions and learn from every release.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section page-width">
+      <div class="section-label"><span>05</span> What's next?</div>
+      <div class="contact-content"><p class="eyebrow">Have a project in mind?</p><h2>Let's build<br><em>something useful.</em></h2><p class="contact-description">If you have an idea, an opportunity or simply want to talk about software, I'd be glad to hear from you.</p><div class="contact-actions"><a class="button button-primary" href="mailto:faithinator.faithanic@gmail.com">Say hello <span>↗</span></a><a class="text-link" href="https://www.linkedin.com/in/faith-oguntoye-87453238a/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div></div>
+      <div class="contact-bottom"><a href="mailto:faithinator.faithanic@gmail.com">faithinator.faithanic@gmail.com</a><span>Ogbomoso, Nigeria · Working worldwide</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width"><a class="wordmark" href="#home"><span class="wordmark-mark">F</span><span>faith<span class="wordmark-dot">.</span></span></a><p>Designed & built by Faith Toluwanimi.</p><span>© <%= year %></span><a href="#home" class="back-top">Back to top ↑</a></footer>
+</body>
+</html>
