@@ -121,5 +121,134 @@
     "learning": "This prototype pushed me to think beyond screens and consider state transitions, customer handoff and the trust required in payment-related products.",
     "live": "https://asopay-ogbomosho.vercel.app/",
     "github": ""
+  },
+  {
+    "slug": "cwf-chess-engine",
+    "title": "CodeWithFaith Chess Engine",
+    "eyebrow": "SYSTEMS ENGINEERING · CHESS ENGINE",
+    "summary": "An independently implemented, CPU-first chess engine, built around correctness, search, evaluation and a portable UCI interface.",
+    "status": "In development · 0.9",
+    "role": "Independent engine design and development",
+    "stack": [
+      "Rust",
+      "UCI",
+      "Alpha-beta search",
+      "PVS",
+      "Transposition tables",
+      "Perft testing"
+    ],
+    "problem": "A chess engine must do more than compile: it needs reliable legal-move handling, repeatable testing, efficient search and a way to connect to chess interfaces.",
+    "approach": "CWF Engine is being developed as a layered engine with separate crates for chess rules, search, evaluation, UCI communication and executable orchestration.",
+    "architecture": [
+      "cwf-core handles board state, FEN, legal move generation and game-history rules.",
+      "cwf-search implements iterative-deepening alpha-beta/PVS search and move ordering.",
+      "cwf-eval provides classical position evaluation.",
+      "cwf-uci exposes the supported Universal Chess Interface protocol subset."
+    ],
+    "decisions": [
+      "Prioritize correctness and perft validation before optimization.",
+      "Keep rules, search, evaluation and protocol responsibilities separated.",
+      "Avoid unsupported playing-strength claims; use repeatable benchmarks and match testing."
+    ],
+    "learning": "This project is deepening my understanding of systems programming, search algorithms, testing strategy and the engineering discipline required to build a complete engine.",
+    "live": "",
+    "github": "https://github.com/faithinator-dev/cwf-chess-engine"
+  },
+  {
+    "slug": "cwf-store",
+    "title": "CWF Store",
+    "eyebrow": "PRODUCT PLATFORM · APP DISTRIBUTION",
+    "summary": "A personal app-store platform for showcasing and distributing applications built under the CodeWithFaith brand.",
+    "status": "In development",
+    "role": "Product design and full-stack development",
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Multer",
+      "React"
+    ],
+    "problem": "Projects need a dedicated destination where visitors can discover app details, preview releases and access available downloads.",
+    "approach": "CWF Store combines an application catalogue with app detail pages, download tracking, user feedback and an administration workflow.",
+    "architecture": [
+      "Express provides the application API and server routes.",
+      "MongoDB stores app catalogue and user-generated records.",
+      "The frontend presents app discovery, details and account workflows.",
+      "Download endpoints support tracked distribution of uploaded application packages."
+    ],
+    "decisions": [
+      "Treat app metadata and downloadable releases as separate concerns.",
+      "Provide administration tools for managing catalogue entries.",
+      "Keep download analytics and user feedback connected to individual apps."
+    ],
+    "learning": "The project explores how a developer portfolio can grow into a product-distribution platform with catalogue management and operational features.",
+    "live": "",
+    "github": "https://github.com/faithinator-dev/CWF_store"
+  },
+  {
+    "slug": "co-op-lend",
+    "title": "Co-op Lend",
+    "eyebrow": "FINANCIAL TECHNOLOGY · COOPERATIVE SYSTEMS",
+    "summary": "A cooperative lending platform concept for member savings, loan workflows, repayments and ledger-based financial records.",
+    "status": "Prototype",
+    "role": "Backend and product engineering",
+    "stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Nomba APIs",
+      "Webhooks"
+    ],
+    "problem": "Many cooperative societies still depend on manual records, making savings, loan repayments and financial reporting harder to track and audit.",
+    "approach": "Co-op Lend explores a digital workflow for member management, savings, loan approvals, repayment tracking and financial reporting, with Nomba integration planned for transfer operations.",
+    "architecture": [
+      "Node.js and Express provide authentication, API and business logic.",
+      "MongoDB stores member, account, loan, ledger and audit records.",
+      "The loan workflow models repayment schedules and outstanding balances.",
+      "Nomba API and webhook integration support payment and disbursement workflows."
+    ],
+    "decisions": [
+      "Represent financial activity through traceable ledger entries.",
+      "Design for duplicate webhook protection and reconciliation.",
+      "Separate the prototype workflow from any claim of live financial operations."
+    ],
+    "learning": "This project has helped me think about financial state, transaction integrity, auditability and the backend responsibilities involved in payment-related systems.",
+    "live": "",
+    "github": "https://github.com/faithinator-dev/Cooperative-Lending-Infrastructure-Powered-by-Nomba"
+  },
+  {
+    "slug": "codeguardian",
+    "title": "CodeGuardian",
+    "eyebrow": "DEVELOPER TOOLING · CODE QUALITY",
+    "summary": "A JavaScript code-review helper that flags common code-quality issues and style problems.",
+    "status": "Built",
+    "role": "Backend and application development",
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "EJS",
+      "Bootstrap 5"
+    ],
+    "problem": "Small code-quality issues can make a codebase harder to maintain when they are not noticed during development.",
+    "approach": "CodeGuardian provides a simple interface for submitting JavaScript code and receiving automated warnings for selected patterns and style checks.",
+    "architecture": [
+      "Express serves the application and analysis workflow.",
+      "EJS renders the browser interface.",
+      "The analyzer checks for selected patterns such as var usage, empty functions and production logging."
+    ],
+    "decisions": [
+      "Keep the checks understandable and actionable.",
+      "Focus the first version on a small set of recognizable JavaScript issues.",
+      "Present the results through a straightforward browser workflow."
+    ],
+    "learning": "The project introduced me to building developer-facing utilities and translating code inspection rules into a usable interface.",
+    "live": "",
+    "github": "https://github.com/faithinator-dev/code-guardian"
   }
 ]
