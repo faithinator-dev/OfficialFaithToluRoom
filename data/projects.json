@@ -7,7 +7,7 @@
     "short_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
     "full_description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management. This implementation leverages modern architectural patterns to ensure scalability, maintainability, and a premium user experience across all devices.",
     "description": "A full-stack blogging platform built with a robust backend architecture featuring user authentication and dynamic content management.",
-    "liveLink": "",
+    "liveLink": "https://insight-ink-alpha.vercel.app/",
     "githubLink": "https://github.com/faithinator-dev/insight-ink",
     "categories": [
       "Full-stack",
