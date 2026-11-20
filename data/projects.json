@@ -608,5 +608,381 @@
     ],
     "featured": true,
     "caseStudySlug": "asopay"
+  },
+  {
+    "id": "cwf-chess-engine",
+    "title": "CodeWithFaith Chess Engine",
+    "badge": "SYSTEMS / RUST / CHESS",
+    "short_description": "Rust chess engine built around move-generation correctness, search, evaluation, UCI communication and repeatable testing.",
+    "full_description": "Rust chess engine built around move-generation correctness, search, evaluation, UCI communication and repeatable testing.",
+    "description": "Rust chess engine built around move-generation correctness, search, evaluation, UCI communication and repeatable testing.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/cwf-chess-engine",
+    "categories": [
+      "Systems",
+      "Rust",
+      "Chess"
+    ],
+    "featured": true,
+    "caseStudySlug": "cwf-chess-engine"
+  },
+  {
+    "id": "cwf-store",
+    "title": "CWF Store",
+    "badge": "FULL-STACK / NODE.JS / MONGODB",
+    "short_description": "A CodeWithFaith app-distribution platform concept for showcasing applications, releases and downloads.",
+    "full_description": "A CodeWithFaith app-distribution platform concept for showcasing applications, releases and downloads.",
+    "description": "A CodeWithFaith app-distribution platform concept for showcasing applications, releases and downloads.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/CWF_store",
+    "categories": [
+      "Full-stack",
+      "Node.js",
+      "MongoDB"
+    ],
+    "featured": true,
+    "caseStudySlug": "cwf-store"
+  },
+  {
+    "id": "co-op-lend",
+    "title": "Co-op Lend",
+    "badge": "FINTECH / NODE.JS / MONGODB",
+    "short_description": "A cooperative-lending platform concept exploring member records, savings, loan workflows, repayments and ledger-based financial records.",
+    "full_description": "A cooperative-lending platform concept exploring member records, savings, loan workflows, repayments and ledger-based financial records.",
+    "description": "A cooperative-lending platform concept exploring member records, savings, loan workflows, repayments and ledger-based financial records.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Cooperative-Lending-Infrastructure-Powered-by-Nomba",
+    "categories": [
+      "Fintech",
+      "Node.js",
+      "MongoDB"
+    ],
+    "featured": true,
+    "caseStudySlug": "co-op-lend"
+  },
+  {
+    "id": "naijagrading",
+    "title": "NaijaGrading",
+    "badge": "EDUCATION / JAVASCRIPT",
+    "short_description": "An academic grading tool designed around grade calculations for the Nigerian education system.",
+    "full_description": "An academic grading tool designed around grade calculations for the Nigerian education system.",
+    "description": "An academic grading tool designed around grade calculations for the Nigerian education system.",
+    "liveLink": "https://9ja-grading-system.vercel.app/",
+    "githubLink": "https://github.com/faithinator-dev/NaijaGrading-System",
+    "categories": [
+      "Education",
+      "JavaScript"
+    ],
+    "featured": false
+  },
+  {
+    "id": "ogbomoso-hub",
+    "title": "Ogbomoso Hub",
+    "badge": "COMMUNITY / WEB APP",
+    "short_description": "A community-focused digital project for presenting local information and resources related to Ogbomoso.",
+    "full_description": "A community-focused digital project for presenting local information and resources related to Ogbomoso.",
+    "description": "A community-focused digital project for presenting local information and resources related to Ogbomoso.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/faithinator-ogbomoso-hub",
+    "categories": [
+      "Community",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "skoolify",
+    "title": "Skoolify",
+    "badge": "EDUCATION / NODE.JS / EXPRESS",
+    "short_description": "A school-management system with role-based access, school records, student and teacher management, attendance and academic performance tracking.",
+    "full_description": "A school-management system with role-based access, school records, student and teacher management, attendance and academic performance tracking.",
+    "description": "A school-management system with role-based access, school records, student and teacher management, attendance and academic performance tracking.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Skoolify",
+    "categories": [
+      "Education",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "featured": true
+  },
+  {
+    "id": "unios",
+    "title": "UNIOS",
+    "badge": "AI / PRODUCTIVITY / WEB APP",
+    "short_description": "An AI-powered productivity platform concept combining Chat Brain, StudyBuddy, Codex Debugger and an ELI5 Tutor in one interface.",
+    "full_description": "An AI-powered productivity platform concept combining Chat Brain, StudyBuddy, Codex Debugger and an ELI5 Tutor in one interface.",
+    "description": "An AI-powered productivity platform concept combining Chat Brain, StudyBuddy, Codex Debugger and an ELI5 Tutor in one interface.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/UNIOS",
+    "categories": [
+      "AI",
+      "Productivity",
+      "Web app"
+    ],
+    "featured": true
+  },
+  {
+    "id": "cwf-outreach",
+    "title": "CWF Lead Outreach",
+    "badge": "BACKEND / NODE.JS / MONGODB",
+    "short_description": "A Node.js and MongoDB outreach manager for importing leads, organizing campaigns, personalizing emails and tracking delivery states.",
+    "full_description": "A Node.js and MongoDB outreach manager for importing leads, organizing campaigns, personalizing emails and tracking delivery states.",
+    "description": "A Node.js and MongoDB outreach manager for importing leads, organizing campaigns, personalizing emails and tracking delivery states.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/CWF_Outreach",
+    "categories": [
+      "Backend",
+      "Node.js",
+      "MongoDB"
+    ],
+    "featured": true
+  },
+  {
+    "id": "heritage-library",
+    "title": "Heritage Library",
+    "badge": "EDUCATION / WEB APP",
+    "short_description": "A digital library project exploring the presentation and organization of heritage-related learning resources.",
+    "full_description": "A digital library project exploring the presentation and organization of heritage-related learning resources.",
+    "description": "A digital library project exploring the presentation and organization of heritage-related learning resources.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Heritage-Library-",
+    "categories": [
+      "Education",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "flutter-calculator",
+    "title": "Flutter Calculator",
+    "badge": "MOBILE / FLUTTER / DART",
+    "short_description": "A Flutter calculator project built while learning native mobile application development with Dart.",
+    "full_description": "A Flutter calculator project built while learning native mobile application development with Dart.",
+    "description": "A Flutter calculator project built while learning native mobile application development with Dart.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Flutter_Calculator",
+    "categories": [
+      "Mobile",
+      "Flutter",
+      "Dart"
+    ],
+    "featured": false
+  },
+  {
+    "id": "faith-bank-flutter",
+    "title": "Faith Bank UI",
+    "badge": "MOBILE / FLUTTER / DART",
+    "short_description": "A Flutter banking-interface learning project focused on a mobile banking homepage experience.",
+    "full_description": "A Flutter banking-interface learning project focused on a mobile banking homepage experience.",
+    "description": "A Flutter banking-interface learning project focused on a mobile banking homepage experience.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Faith-Bank-with-flutter",
+    "categories": [
+      "Mobile",
+      "Flutter",
+      "Dart"
+    ],
+    "featured": false
+  },
+  {
+    "id": "collaboratory",
+    "title": "Collaboratory",
+    "badge": "WEB APP",
+    "short_description": "A collaborative project repository in the CodeWithFaith portfolio.",
+    "full_description": "A collaborative project repository in the CodeWithFaith portfolio.",
+    "description": "A collaborative project repository in the CodeWithFaith portfolio.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Collaboratory",
+    "categories": [
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "visionaire-academy",
+    "title": "Visionaire Academy",
+    "badge": "EDUCATION / WEB APP",
+    "short_description": "An education-focused web project from the CodeWithFaith project collection.",
+    "full_description": "An education-focused web project from the CodeWithFaith project collection.",
+    "description": "An education-focused web project from the CodeWithFaith project collection.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Visionaire-Academy",
+    "categories": [
+      "Education",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "niyassakh-real-estate",
+    "title": "Niyassakh Real Estate",
+    "badge": "REAL ESTATE / WEB APP",
+    "short_description": "A real-estate web project exploring a digital property-business presence.",
+    "full_description": "A real-estate web project exploring a digital property-business presence.",
+    "description": "A real-estate web project exploring a digital property-business presence.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Niyassakh-Real-estate",
+    "categories": [
+      "Real estate",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "imperial-heritage-hotel",
+    "title": "Imperial Heritage Hotel",
+    "badge": "HOSPITALITY / WEB APP",
+    "short_description": "A hotel and hospitality web project.",
+    "full_description": "A hotel and hospitality web project.",
+    "description": "A hotel and hospitality web project.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/IMPERIAL-HERITAGE-HOTEL",
+    "categories": [
+      "Hospitality",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "hotel-maison-amani",
+    "title": "Hotel Maison Amani",
+    "badge": "HOSPITALITY / WEB APP",
+    "short_description": "A hospitality website project in the CodeWithFaith repository collection.",
+    "full_description": "A hospitality website project in the CodeWithFaith repository collection.",
+    "description": "A hospitality website project in the CodeWithFaith repository collection.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Hotel-maison-amani",
+    "categories": [
+      "Hospitality",
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "orbits-ecosystem",
+    "title": "Orbits Ecosystem",
+    "badge": "WEB APP",
+    "short_description": "An ecosystem-focused software project repository.",
+    "full_description": "An ecosystem-focused software project repository.",
+    "description": "An ecosystem-focused software project repository.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Orbits-ecosystem",
+    "categories": [
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "vespers",
+    "title": "Vespers",
+    "badge": "WEB APP",
+    "short_description": "A web project in the CodeWithFaith project collection.",
+    "full_description": "A web project in the CodeWithFaith project collection.",
+    "description": "A web project in the CodeWithFaith project collection.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Vespers",
+    "categories": [
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "hearth-herb",
+    "title": "Hearth & Herb",
+    "badge": "WEB APP",
+    "short_description": "A web project in the CodeWithFaith project collection.",
+    "full_description": "A web project in the CodeWithFaith project collection.",
+    "description": "A web project in the CodeWithFaith project collection.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Hearth-Herb",
+    "categories": [
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "taskmaster",
+    "title": "TaskMaster",
+    "badge": "FULL-STACK / NODE.JS / EXPRESS",
+    "short_description": "A task-management project exploring task organization and tracking.",
+    "full_description": "A task-management project exploring task organization and tracking.",
+    "description": "A task-management project exploring task organization and tracking.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/TaskMaster",
+    "categories": [
+      "Full-stack",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "featured": false
+  },
+  {
+    "id": "decagenius",
+    "title": "Decagenius",
+    "badge": "WEB APP",
+    "short_description": "A project repository in the CodeWithFaith collection; project details are still being documented.",
+    "full_description": "A project repository in the CodeWithFaith collection; project details are still being documented.",
+    "description": "A project repository in the CodeWithFaith collection; project details are still being documented.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/Decagenius",
+    "categories": [
+      "Web app"
+    ],
+    "featured": false
+  },
+  {
+    "id": "fitlife",
+    "title": "FitLife Gym Management",
+    "badge": "MOBILE / FLUTTER / DART",
+    "short_description": "A Flutter and PHP school project designed around a shared REST API for the web and Android experiences.",
+    "full_description": "A Flutter and PHP school project designed around a shared REST API for the web and Android experiences.",
+    "description": "A Flutter and PHP school project designed around a shared REST API for the web and Android experiences.",
+    "liveLink": "",
+    "githubLink": "",
+    "categories": [
+      "Mobile",
+      "Flutter",
+      "Dart",
+      "PHP",
+      "MySQL"
+    ],
+    "featured": false
+  },
+  {
+    "id": "sqi-checkmate-arena",
+    "title": "SQI Checkmate Arena",
+    "badge": "MOBILE / FLUTTER / DART",
+    "short_description": "A Flutter chess-club app concept for organizing a campus chess community and its activities.",
+    "full_description": "A Flutter chess-club app concept for organizing a campus chess community and its activities.",
+    "description": "A Flutter chess-club app concept for organizing a campus chess community and its activities.",
+    "liveLink": "",
+    "githubLink": "https://github.com/faithinator-dev/SQI_Chess_app",
+    "categories": [
+      "Mobile",
+      "Flutter",
+      "Dart",
+      "Chess"
+    ],
+    "featured": true
+  },
+  {
+    "id": "oyo-empire",
+    "title": "Oyo Empire Strategy Game",
+    "badge": "MOBILE / FLUTTER / DART",
+    "short_description": "A Flutter strategy-game prototype inspired by the history and political structure of the Oyo Empire.",
+    "full_description": "A Flutter strategy-game prototype inspired by the history and political structure of the Oyo Empire.",
+    "description": "A Flutter strategy-game prototype inspired by the history and political structure of the Oyo Empire.",
+    "liveLink": "",
+    "githubLink": "",
+    "categories": [
+      "Mobile",
+      "Flutter",
+      "Dart",
+      "Game"
+    ],
+    "featured": true
   }
 ]
