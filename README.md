@@ -17,19 +17,19 @@ A personal portfolio for Faith Toluwanimi, focused on full-stack engineering, ba
 4. Start the app: `npm start`
 5. Open `http://localhost:3000`
 
-The portfolio homepage is rendered from `views/index.ejs`. Static assets live in `public/`, and project cards are loaded from `GET /api/projects`.
+The portfolio homepage is rendered from `views/index.ejs`. Static assets live in `public/`, and the complete project catalogue is loaded from `GET /api/projects`. Visitors can search and filter projects by category. The floating AI assistant uses `POST /api/chat` and answers from the public profile, project catalogue, case studies and mobile-project data. Configure `GEMINI_API_KEY` in the deployment environment to enable AI replies; without it, the assistant displays a clear setup message.
 
 ## Environment variables
 
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `EMAIL_TO` — contact form email delivery.
-- `GEMINI_API_KEY` — optional AI assistant endpoint.
+- `GEMINI_API_KEY` — enables the portfolio AI assistant (Gemini).
 
 Never commit real credentials or API keys.
 
 
 ## Portfolio sections
 
-- `/` — personal introduction and selected projects
+- `/` — personal introduction, complete searchable project catalogue and AI portfolio assistant
 - `/work/:slug` — project case studies
 - `/mobile` — Flutter and Dart projects, with honest progress labels
 - `/journal` — engineering notes
