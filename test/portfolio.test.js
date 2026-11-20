@@ -57,3 +57,28 @@ test('projects API returns a JSON array', async () => {
     assert.ok(projects.some(project => project.id === 'asopay'));
   });
 });
+
+test('complete project catalogue includes the expanded projects', async () => {
+  await withServer(async base => {
+    const response = await fetch(`${base}/api/projects`);
+    assert.equal(response.status, 200);
+    const projects = await response.json();
+    assert.ok(projects.length >= 50, 'expected the expanded project catalogue');
+    assert.ok(projects.some(project => project.id === 'cwf-chess-engine'));
+    assert.ok(projects.some(project => project.id === 'unios'));
+    assert.ok(projects.some(project => project.id === 'fitlife'));
+  });
+});
+
+test('AI assistant validates empty questions without requiring an API key', async () => {
+  await withServer(async base => {
+    const response = await fetch(`${base}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: '   ' })
+    });
+    assert.equal(response.status, 400);
+    const body = await response.json();
+    assert.match(body.error, /question/i);
+  });
+});
