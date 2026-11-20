@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="/css/premium-polish.css">
   <link rel="stylesheet" href="/css/reference-design-system.css">
   <script src="/js/portfolio.js" defer></script>
+  <link rel="stylesheet" href="/css/assistant.css">
+  <script src="/js/assistant.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -90,10 +92,16 @@
     <section id="work" class="section work-section">
       <div class="page-width">
         <div class="section-label"><span>02</span> Selected work</div>
-        <div class="work-heading"><h2>Things I've<br><em>been building.</em></h2><p>A closer look at selected products, the problems behind them and the engineering decisions that shaped them.</p></div>
-        <div id="project-grid" class="project-grid" aria-live="polite">
-          <article class="project-placeholder"><span>Loading selected projects…</span></article>
+        <div class="work-heading"><h2>Things I've<br><em>been building.</em></h2><p>Explore the complete collection of products, experiments, mobile apps and engineering work. Open a case study, live project or source repository to learn more.</p></div>
+        <div class="project-tools">
+          <label class="project-search" for="project-search"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search all projects…" autocomplete="off"></label>
+          <p class="project-count" id="project-count" aria-live="polite">Loading project catalogue…</p>
         </div>
+        <div id="project-filters" class="project-filters" aria-label="Filter projects"></div>
+        <div id="project-grid" class="project-grid" aria-live="polite">
+          <article class="project-placeholder"><span>Loading all projects…</span></article>
+        </div>
+        <p class="catalogue-note">Browse the complete project catalogue, including web applications, backend systems, mobile apps, experiments and prototypes. Use search or filters to find something specific.</p>
         <div class="work-footer"><a class="inline-link" href="/mobile">Explore mobile projects <span>↗</span></a><a class="inline-link" href="/journal">Read the engineering journal <span>↗</span></a><a class="inline-link" href="https://github.com/faithinator-dev?tab=repositories" target="_blank" rel="noreferrer">Explore all repositories <span>↗</span></a></div>
       </div>
     </section>
